@@ -1,0 +1,11 @@
+l_english:
+ economic_pressure_1: "Light Economic Pressure"
+ economic_pressure_1_desc: "Treasury is in deficit. Construction projects are slowing. Reduce expenses or increase revenue to recover."
+ economic_pressure_2: "Moderate Economic Pressure"
+ economic_pressure_2_desc: "Persistent budget deficit is hurting industrial output. Government services strained."
+ economic_pressure_3: "Serious Economic Crisis"
+ economic_pressure_3_desc: "Multiple months of deficit have caused inflation and capital flight. Industry is operating at half capacity."
+ economic_pressure_4: "Severe Economic Crisis"
+ economic_pressure_4_desc: "Hyperinflation looms. Production is crippled. Population growth has slowed dramatically. Risk of social unrest."
+ economic_pressure_5: "Economic Collapse"
+ economic_pressure_5_desc: "Treasury has been negative for nearly a year. Economy is in freefall. Risk of civil war and government collapse increases daily."

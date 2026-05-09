@@ -1,0 +1,37 @@
+# =============================================================================
+# MD-Realistic-2000-Rebalance — Money Cost on_actions Hooks
+# =============================================================================
+# Hooks calculate_construction_money_cost + check_bankruptcy_status into
+# MD's monthly tick.
+#
+# Initialization runs once at game start via on_startup.
+# =============================================================================
+
+on_actions = {
+
+	# ---------------------------------------------------------------------
+	# Game start: initialize tracking variables for every country
+	# ---------------------------------------------------------------------
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { exists = yes }
+				md_realistic_init_variables = yes
+			}
+		}
+	}
+
+	# ---------------------------------------------------------------------
+	# Monthly: calculate construction & production costs, check bankruptcy
+	# ---------------------------------------------------------------------
+	on_monthly = {
+		effect = {
+			every_country = {
+				limit = { exists = yes }
+				calculate_construction_money_cost = yes
+				calculate_production_money_cost = yes
+				check_bankruptcy_status = yes
+			}
+		}
+	}
+}

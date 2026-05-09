@@ -1,0 +1,183 @@
+# =============================================================================
+# MD-Realistic-2000-Rebalance — Construction & Production Money Cost
+# =============================================================================
+# Adds money cost to factory construction and military production.
+# Cost scales with country's GDP/c (cheap labor in poor countries → cheaper to
+# operate factories, but lower productivity offsets this in MD's existing model).
+#
+# All costs feed into MD's existing 'additional_expenses_rate' variable, which
+# appears in the budget panel under "Other Expenses".
+#
+# Tunable constants (search "TUNABLE"):
+#   civ_unit_cost_factor = 0.015 (1.5% of GDP/c per active civilian factory)
+#   mil_unit_cost_factor = 0.025 (2.5% of GDP/c per active military factory)
+#   civ_utilization_during_peace = 0.5 (assume 50% of civs are constructing)
+#   bankruptcy_threshold = 0 ($, treasury below = bankrupt)
+#   recovery_threshold = 5 ($, treasury above = exit bankruptcy)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Effect: calculate_construction_money_cost
+# Called: monthly via on_actions
+# Purpose: Compute money drain from active civilian factory construction
+# -----------------------------------------------------------------------------
+calculate_construction_money_cost = {
+	# Base cost per active civilian factory per month
+	# Formula: gdp_per_capita × 0.015 + 0.05 (floor)
+	set_temp_variable = { civ_construction_unit_cost = gdp_per_capita }
+	multiply_temp_variable = { civ_construction_unit_cost = 0.015 }   # TUNABLE 1
+	add_to_temp_variable = { civ_construction_unit_cost = 0.05 }       # min cost floor
+
+	# Effective civilian factories engaged in construction
+	# = total × manpower_fulfillment × utilization_rate
+	set_temp_variable = { active_civs = industrial_complex_total }
+	multiply_temp_variable = { active_civs = civilian_factories_manpower_fulfillment }
+	multiply_temp_variable = { active_civs = 0.5 }                      # TUNABLE 2 — peacetime utilization
+
+	# Total monthly construction cost
+	set_variable = { md_realistic_construction_cost = civ_construction_unit_cost }
+	multiply_variable = { md_realistic_construction_cost = active_civs }
+
+	# Add to MD's existing expense rate (will appear in "Other Expenses")
+	add_to_variable = { additional_expenses_rate = md_realistic_construction_cost }
+}
+
+# -----------------------------------------------------------------------------
+# Effect: calculate_production_money_cost
+# Called: monthly via on_actions
+# Purpose: Compute money drain from active military equipment production
+# -----------------------------------------------------------------------------
+calculate_production_money_cost = {
+	# Per-unit cost for military factories
+	set_temp_variable = { mil_production_unit_cost = gdp_per_capita }
+	multiply_temp_variable = { mil_production_unit_cost = 0.025 }      # TUNABLE 3
+	add_to_temp_variable = { mil_production_unit_cost = 0.10 }
+
+	# Active mil factories
+	set_temp_variable = { active_mils = military_fac }
+	multiply_temp_variable = { active_mils = military_factories_manpower_fulfillment }
+
+	# Active dockyards (slightly different rate)
+	set_temp_variable = { active_docks = dockyard_fac }
+	multiply_temp_variable = { active_docks = naval_factories_manpower_fulfillment }
+	multiply_temp_variable = { active_docks = 1.2 }                     # docks more expensive
+
+	# Combined production cost
+	set_variable = { md_realistic_production_cost = mil_production_unit_cost }
+	multiply_variable = { md_realistic_production_cost = active_mils }
+
+	set_temp_variable = { dock_cost_temp = mil_production_unit_cost }
+	multiply_temp_variable = { dock_cost_temp = active_docks }
+	add_to_variable = { md_realistic_production_cost = dock_cost_temp }
+
+	# Add to MD's existing expense rate
+	add_to_variable = { additional_expenses_rate = md_realistic_production_cost }
+}
+
+# -----------------------------------------------------------------------------
+# Effect: check_bankruptcy_status
+# Called: monthly via on_actions
+# Purpose: Track months in red, apply gradual decay penalty ideas
+# -----------------------------------------------------------------------------
+check_bankruptcy_status = {
+	# If treasury is negative, increment counter
+	if = {
+		limit = { check_variable = { treasury < 0 } }
+		add_to_variable = { md_realistic_bankruptcy_months = 1 }
+	}
+	# If recovering (treasury > 5B), decrement faster
+	else_if = {
+		limit = { check_variable = { treasury > 5 } }
+		add_to_variable = { md_realistic_bankruptcy_months = -2 }
+		clamp_variable = { var = md_realistic_bankruptcy_months min = 0 }
+	}
+
+	# Apply graduated pressure ideas based on counter value
+	# Tier 1: 1-2 months in red
+	if = {
+		limit = {
+			check_variable = { md_realistic_bankruptcy_months > 0 }
+			check_variable = { md_realistic_bankruptcy_months < 3 }
+			NOT = { has_idea = economic_pressure_1 }
+		}
+		# Remove higher tiers if present
+		if = { limit = { has_idea = economic_pressure_2 } remove_ideas = economic_pressure_2 }
+		if = { limit = { has_idea = economic_pressure_3 } remove_ideas = economic_pressure_3 }
+		if = { limit = { has_idea = economic_pressure_4 } remove_ideas = economic_pressure_4 }
+		if = { limit = { has_idea = economic_pressure_5 } remove_ideas = economic_pressure_5 }
+		add_ideas = economic_pressure_1
+	}
+	# Tier 2: 3-4 months
+	else_if = {
+		limit = {
+			check_variable = { md_realistic_bankruptcy_months > 2 }
+			check_variable = { md_realistic_bankruptcy_months < 5 }
+			NOT = { has_idea = economic_pressure_2 }
+		}
+		if = { limit = { has_idea = economic_pressure_1 } remove_ideas = economic_pressure_1 }
+		if = { limit = { has_idea = economic_pressure_3 } remove_ideas = economic_pressure_3 }
+		if = { limit = { has_idea = economic_pressure_4 } remove_ideas = economic_pressure_4 }
+		if = { limit = { has_idea = economic_pressure_5 } remove_ideas = economic_pressure_5 }
+		add_ideas = economic_pressure_2
+	}
+	# Tier 3: 5-6 months
+	else_if = {
+		limit = {
+			check_variable = { md_realistic_bankruptcy_months > 4 }
+			check_variable = { md_realistic_bankruptcy_months < 7 }
+			NOT = { has_idea = economic_pressure_3 }
+		}
+		if = { limit = { has_idea = economic_pressure_1 } remove_ideas = economic_pressure_1 }
+		if = { limit = { has_idea = economic_pressure_2 } remove_ideas = economic_pressure_2 }
+		if = { limit = { has_idea = economic_pressure_4 } remove_ideas = economic_pressure_4 }
+		if = { limit = { has_idea = economic_pressure_5 } remove_ideas = economic_pressure_5 }
+		add_ideas = economic_pressure_3
+	}
+	# Tier 4: 7-9 months
+	else_if = {
+		limit = {
+			check_variable = { md_realistic_bankruptcy_months > 6 }
+			check_variable = { md_realistic_bankruptcy_months < 10 }
+			NOT = { has_idea = economic_pressure_4 }
+		}
+		if = { limit = { has_idea = economic_pressure_1 } remove_ideas = economic_pressure_1 }
+		if = { limit = { has_idea = economic_pressure_2 } remove_ideas = economic_pressure_2 }
+		if = { limit = { has_idea = economic_pressure_3 } remove_ideas = economic_pressure_3 }
+		if = { limit = { has_idea = economic_pressure_5 } remove_ideas = economic_pressure_5 }
+		add_ideas = economic_pressure_4
+	}
+	# Tier 5: 10+ months in deficit
+	else_if = {
+		limit = {
+			check_variable = { md_realistic_bankruptcy_months > 9 }
+			NOT = { has_idea = economic_pressure_5 }
+		}
+		if = { limit = { has_idea = economic_pressure_1 } remove_ideas = economic_pressure_1 }
+		if = { limit = { has_idea = economic_pressure_2 } remove_ideas = economic_pressure_2 }
+		if = { limit = { has_idea = economic_pressure_3 } remove_ideas = economic_pressure_3 }
+		if = { limit = { has_idea = economic_pressure_4 } remove_ideas = economic_pressure_4 }
+		add_ideas = economic_pressure_5
+	}
+	# Recovered: remove all pressure ideas
+	else_if = {
+		limit = {
+			check_variable = { md_realistic_bankruptcy_months = 0 }
+		}
+		if = { limit = { has_idea = economic_pressure_1 } remove_ideas = economic_pressure_1 }
+		if = { limit = { has_idea = economic_pressure_2 } remove_ideas = economic_pressure_2 }
+		if = { limit = { has_idea = economic_pressure_3 } remove_ideas = economic_pressure_3 }
+		if = { limit = { has_idea = economic_pressure_4 } remove_ideas = economic_pressure_4 }
+		if = { limit = { has_idea = economic_pressure_5 } remove_ideas = economic_pressure_5 }
+	}
+}
+
+# -----------------------------------------------------------------------------
+# Effect: md_realistic_init_variables
+# Called: once at game start
+# Purpose: Initialize tracking variables
+# -----------------------------------------------------------------------------
+md_realistic_init_variables = {
+	set_variable = { md_realistic_bankruptcy_months = 0 }
+	set_variable = { md_realistic_construction_cost = 0 }
+	set_variable = { md_realistic_production_cost = 0 }
+}

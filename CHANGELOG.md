@@ -4,6 +4,62 @@ All changes from vanilla Millennium Dawn to MD-Realistic-2000-Rebalance.
 
 ---
 
+## Version 1.1.0 — Money Cost System
+
+Adds **construction & production money costs** to MD's economy. Building factories
+and producing equipment now drains the national treasury proportionally to country's
+GDP per capita.
+
+### New mechanics
+
+**Per-month treasury drain:**
+- Construction cost = `gdp/c × 0.015 × civilian_factories × manpower_fulfillment × 0.5`
+- Production cost = `gdp/c × 0.025 × military_factories × manpower_fulfillment`
+- Costs appear in budget panel under "Other Expenses" (`additional_expenses_rate`)
+
+**Example monthly costs:**
+| Country | Civ cost/month | Mil cost/month | Total |
+|---|---|---|---|
+| USA (60 civ, 45 mil, gdp/c $36k) | $0.5B × 60 = $15B | $0.9B × 45 = $40.5B | ~$56B |
+| Russia (12 civ, 17 mil, gdp/c $1.7k) | $0.04B × 12 = $0.5B | $0.07B × 17 = $1.2B | ~$1.7B |
+| Polska (6 civ, 4 mil, gdp/c $4.5k) | $0.1B × 6 = $0.6B | $0.2B × 4 = $0.8B | ~$1.4B |
+| Indie (21 civ, 15 mil, gdp/c $0.4k) | $0.025B × 21 = $0.5B | $0.05B × 15 = $0.75B | ~$1.3B |
+
+**Gradual bankruptcy decay:**
+When treasury < $0, country accumulates `economic_pressure` levels over months:
+- Tier 1 (1-2 months): -10% IC, -10% construction speed, +5% consumer goods
+- Tier 2 (3-4 months): -25% IC, -25% construction, -10% stability
+- Tier 3 (5-6 months): -50% IC, -50% construction, -20% stability, -5% pop growth
+- Tier 4 (7-9 months): -75% IC, -75% construction, -30% stability, -10% pop growth
+- Tier 5 (10+ months): -90% IC, -90% construction, -40% stability, -20% pop growth
+
+Recovery is fast: each month with treasury > $5B decreases counter by 2.
+
+### New files added
+
+- `common/scripted_effects/01_construction_money_cost.txt` — calculate functions + bankruptcy check
+- `common/ideas/01_economic_pressure.txt` — 5 graduated pressure ideas
+- `common/on_actions/01_money_cost_hooks.txt` — monthly trigger
+- `localisation/english/md_realistic_economic_pressure_l_english.yml` — UI text
+
+### Where to see it in-game
+
+Open **F2 → Budget** panel. New cost will appear under "Other Expenses" line:
+- Visible variable: `md_realistic_construction_cost`
+- Visible variable: `md_realistic_production_cost`
+
+If you go bankrupt, you'll get an "Economic Pressure" idea visible in your country's
+National Spirits panel. Higher tiers = worse penalties.
+
+### Tuning
+
+If economy is too punishing, edit `common/scripted_effects/01_construction_money_cost.txt`:
+- Lower `civ_construction_unit_cost` multiplier (line marked TUNABLE 1)
+- Lower `mil_production_unit_cost` multiplier (line marked TUNABLE 3)
+- Lower utilization rate (TUNABLE 2)
+
+---
+
 ## Version 1.0.0 — Initial release
 
 ### Population (history/states/*.txt — 1,241 files)
