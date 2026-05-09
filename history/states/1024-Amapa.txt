@@ -1,0 +1,26 @@
+state = {
+	id = 1024
+	name = "STATE_1024"
+	manpower = 466871
+
+	state_category = state_01
+
+	history = {
+		owner = BRA
+
+		victory_points = {
+			6980 3
+		}
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = BRA
+		set_variable = { productivity_state_var = 645 }
+		add_to_array = { BRA.amazon_states = THIS.id }
+	}
+	provinces = {
+		4980 6980
+	 }
+}

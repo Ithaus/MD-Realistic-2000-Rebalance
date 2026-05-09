@@ -1,0 +1,46 @@
+state = {
+	id = 166
+	name = "STATE_166"
+	resources = {
+		oil = 5
+	}
+
+	history = {
+		owner = IRQ
+		victory_points = {
+			11498 11
+		}
+		victory_points = {
+			10106 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 3
+			air_base = 2
+
+		}
+		add_core_of = IRQ
+		add_core_of = KUR
+		add_to_array = {
+			array = sunni_states
+		}
+		set_variable = { productivity_state_var = 505 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_mosul }
+			province = { id = 11498 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_tal_afar }
+			province = { id = 10106 }
+		}
+	}
+
+	provinces = {
+		1938 10106 12372 11369 11498
+	}
+	manpower = 2527357
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

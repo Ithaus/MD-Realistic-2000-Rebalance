@@ -1,0 +1,33 @@
+state = {
+	id = 373
+	name = "STATE_373"
+
+	resources = {
+		tungsten = 6
+	}
+
+	history = {
+		owner = MOR
+		add_core_of = SHA
+		add_core_of = MOR
+		victory_points = {
+			5012 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			5012 = {
+				naval_base = 2
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.55 }
+		set_variable = { productivity_state_var = 598 }
+	}
+
+	provinces = {
+		4920 5012 8038 8111 10875 6406 15502 15503 15504 15505 15506 15509
+	}
+	manpower = 287357
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

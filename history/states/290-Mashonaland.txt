@@ -1,0 +1,46 @@
+state = {
+	id = 290
+	name = "STATE_290"
+
+	resources = {
+		oil = 9
+		chromium = 41
+	}
+
+	history = {
+		owner = ZIM
+		victory_points = {
+			10929 10
+		}
+		victory_points = {
+			11283 1
+		}
+		victory_points = {
+			11281 1
+		}
+		victory_points = {
+			11269 3
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			arms_factory = 1
+			air_base = 4
+			industrial_complex = 1
+		}
+		add_core_of = ZIM
+		set_variable = { productivity_state_var = 565 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_harare }
+			province = { id = 10929 }
+		}
+	}
+
+	provinces = {
+		2216 10929 11269 11281 11282 11283 11290 11296 11298
+	}
+	manpower = 5570789
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

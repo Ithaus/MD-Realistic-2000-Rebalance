@@ -1,0 +1,51 @@
+state = {
+	id = 1060
+	name = "STATE_1060"
+
+	history = {
+		owner = ITA
+		victory_points = {
+			6788 5
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 1
+			dockyard = 2
+			6788 = {
+				naval_base = 8
+				# fincantieri mil department
+				naval_facility = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			14604 = {
+				naval_base = 10
+				naval_supply_hub = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = ITA
+		set_variable = { productivity_state_var = 1500 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_genova }
+			province = { id = 6788 }
+		}
+	}
+
+	provinces = {
+		6788 11891 14604
+	}
+	manpower = 1458343
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

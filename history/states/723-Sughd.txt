@@ -1,0 +1,36 @@
+state = {
+	id = 723
+	name = "STATE_723"
+
+	history = {
+		owner = TAJ
+		victory_points = {
+			14205 3
+		}
+		victory_points = {
+			10660 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = TAJ
+		set_variable = { productivity_state_var = 682 }
+		add_province_modifier = {
+			static_modifiers = { terrain_khujand }
+			province = { id = 14205 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_isfara }
+			province = { id = 10660 }
+		}
+	}
+
+	provinces = {
+		1919 4467 10187 10660 14134 14135 14205
+	}
+	manpower = 1847605
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

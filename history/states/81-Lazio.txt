@@ -1,0 +1,69 @@
+state = {
+	id = 81
+	name = "STATE_81"
+
+	resources = {
+		steel = 34
+		aluminium = 4
+	}
+	history = {
+		owner = ITA
+		victory_points = {
+			9904 20
+		}
+		victory_points = {
+			11846 1
+		}
+		victory_points = {
+			9794 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 8
+			arms_factory = 1
+			offices = 1
+			industrial_complex = 1
+			microchip_plant = 1
+			11751 = {
+				naval_base = 5
+			}
+			11846 = {
+				naval_base = 2
+			}
+			9904 = {
+				landmark_colosseum = {
+					allowed = {
+						has_dlc = "Gotterdammerung"
+					}
+					level = 1
+				}
+			}
+		}
+		add_core_of = ITA
+		set_variable = { hydroelectric_energy_production_var = 0.397 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 1200 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_rome }
+			province = { id = 9904 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_latina }
+			province = { id = 11846 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_terni }
+			province = { id = 9794 }
+		}
+	}
+
+	provinces = {
+		923 6862 9794 9904 11751 11846
+	}
+	manpower = 5458100
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

@@ -1,0 +1,121 @@
+state = {
+	id = 609
+	name = "STATE_609"
+	manpower = 13108028
+	state_category = state_09
+
+	resources = {
+		
+	}
+
+	history = {
+		owner = JAP
+		victory_points = { 7110 10 } #Fukuoka
+		victory_points = { 11925 5 } #Kumamoto
+		victory_points = { 4102 5 } #Kagoshima
+		victory_points = { 1025 5 } #Kitakyushu
+		victory_points = { 9950 5 } #Nagasaki
+		victory_points = { 1020 1 } #Miyazaki
+		victory_points = { 1158 1 } #Sasebo
+		victory_points = { 4027 1 } #Oita
+		victory_points = { 4198 1 } #Nishinoomote
+		victory_points = { 14857 1 } #Kurume
+		victory_points = { 14858 1 } #Goto
+		victory_points = { 12006 1 } #Yatsushiro
+		victory_points = { 12032 1 } #Kanoya
+		victory_points = { 14893 1 } #Amakusa
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 5
+			offices = 5
+			arms_factory = 2
+			fuel_silo = 2
+			dockyard = 1
+			air_base = 6
+			nuclear_reactor = 2
+			agriculture_district = 1
+			microchip_plant = 3
+			1158 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			1025 = {
+				naval_base = 6
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 2.938 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { geothermal_energy_production_var = 0.1933 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		add_core_of = JAP
+		set_variable = { productivity_state_var = 880 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_fukuoka }
+			province = { id = 7110 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_goto }
+			province = { id = 14858 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_sasebo }
+			province = { id = 1158 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kitakyushu }
+			province = { id = 1025 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_nagasaki }
+			province = { id = 9950 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kurume }
+			province = { id = 14857 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_oita }
+			province = { id = 4027 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kumamoto }
+			province = { id = 11925 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_amakusa }
+			province = { id = 14893 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_yatsushiro }
+			province = { id = 12006 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kagoshima }
+			province = { id = 4102 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kanoya }
+			province = { id = 12032 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_miyazaki }
+			province = { id = 1020 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_nishinoomote }
+			province = { id = 4198 }
+		}
+	}
+
+	provinces = {
+		1020 1025 1158 1183 4027 4102 4164 4198 7110 7178 9950 10020 10092 11925 11949 12006 12032 14856 14857 14858 14859 14891 14892 14893
+	}
+}

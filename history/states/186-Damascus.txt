@@ -1,0 +1,32 @@
+state = {
+	id = 186
+	name = "STATE_186"
+
+	history = {
+		owner = SYR
+		victory_points = {
+			4111 18
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 4
+
+		}
+		add_core_of = SYR
+		set_variable = { productivity_state_var = 812 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_damascus }
+			province = { id = 4111 }
+		}
+	}
+
+	provinces = {
+		4111 4550 7184 11107 11116
+	}
+	manpower = 4058271
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

@@ -1,0 +1,32 @@
+state = {
+	id = 107
+	name = "STATE_107"
+
+	history = {
+		owner = LAT
+		victory_points = {
+			9340 5
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			9340 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = LAT
+		set_variable = { productivity_state_var = 700 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_riga }
+			province = { id = 9340 }
+		}
+	}
+
+	provinces = {
+		9340
+	}
+	manpower = 877167
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

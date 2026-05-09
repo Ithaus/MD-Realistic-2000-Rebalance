@@ -1,0 +1,68 @@
+state = {
+	id = 42
+	name = "STATE_42"
+	manpower = 11001580
+	state_category = state_09
+
+	resources = {
+		steel = 1
+	}
+
+	history = {
+		owner = GER
+		victory_points = {
+			9517 5
+		}
+		victory_points = {
+			6581 2
+		}
+		victory_points = {
+			3530 2
+		}
+		victory_points = {
+			11640 1
+		}
+		victory_points = {
+			519 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 3
+			offices = 2
+			air_base = 3
+			anti_air_building = 1
+			nuclear_reactor = 1
+			agriculture_district = 1
+		}
+		add_dynamic_modifier = { modifier = GER_new_economic_hubs }
+		add_core_of = GER
+		set_variable = { productivity_state_var = 1246 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_stuttgart }
+			province = { id = 9517 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_freiburg }
+			province = { id = 11640 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_karlsruhe }
+			province = { id = 3530 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_ulm }
+			province = { id = 519 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_mannheim }
+			province = { id = 6581 }
+		}
+	}
+
+	provinces = {
+		519 694 3530 3679 3692 6555 6581 6934 9517 11486 11499 11640 13126
+	}
+}

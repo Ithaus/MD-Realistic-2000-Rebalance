@@ -1,0 +1,27 @@
+state = {
+	id = 343
+	name = "STATE_343"
+
+	history = {
+		owner = BEN
+		add_core_of = BEN
+		victory_points = {
+			12874 3
+		}
+		victory_points = {
+			12762 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		set_variable = { productivity_state_var = 790 }
+	}
+
+	provinces = {
+		12762 12874 9731
+	}
+	manpower = 2450876
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

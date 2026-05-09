@@ -1,0 +1,32 @@
+state = {
+	id = 748
+	name = "STATE_748"
+	manpower = 2104
+	state_category = state_00
+
+	history = {
+		owner = AST
+		add_core_of = AST
+		victory_points = { 13005 1 } #Flying Fish Cove
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			air_base = 1
+			13005 = {
+				naval_base = 2
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.08 }
+		set_variable = { productivity_state_var = 820 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_christmas_island }
+			province = { id = 13005 }
+		}
+	}
+
+	provinces = {
+		13005
+
+		}
+}

@@ -1,0 +1,33 @@
+state = {
+	id = 69
+	name = "STATE_69"
+	manpower = 256082
+
+	state_category = state_00
+
+	history = {
+		owner = FRA
+		victory_points = { 12148 1 } #Papeete
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 1
+			12148 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { productivity_state_var = 720 }
+		add_province_modifier = {
+			static_modifiers = { terrain_papeete }
+			province = { id = 12148 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_france_polynesia }
+			province = { id = 10188 }
+		}
+	}
+
+	provinces = {
+		10188 12148
+	}
+}

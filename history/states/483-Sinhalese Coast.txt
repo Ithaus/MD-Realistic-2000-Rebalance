@@ -1,0 +1,44 @@
+state = {
+	id = 483
+	name = "STATE_483"
+
+	resources = {
+		rubber = 12
+	}
+
+	history = {
+		owner = SRI
+		add_core_of = SRI
+		victory_points = {
+			6927 5
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			industrial_complex = 1
+			offices = 1
+			air_base = 4
+			7260 = {
+				naval_base = 6
+			}
+			6927 = {
+				land_facility = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		set_variable = { productivity_state_var = 535 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_colombo }
+			province = { id = 6927 }
+		}
+	}
+
+	provinces = {
+		4219 7260 6927
+	}
+	manpower = 9717489
+	buildings_max_level_factor = 1.000
+	state_category = state_08
+}

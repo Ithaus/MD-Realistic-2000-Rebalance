@@ -1,0 +1,51 @@
+
+state = {
+	id = 92
+	name = "STATE_92"
+
+	history = {
+		owner = SPR
+		victory_points = {
+			6906 6
+		}
+		victory_points = {
+			962 2
+		}
+		victory_points = {
+			6817 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 1
+			arms_factory = 1
+			fuel_silo = 1
+			renewable_energy_infra = 1
+			air_base = 3
+			6906 = {
+				naval_base = 3
+			}
+			962 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = SPR
+		set_variable = { productivity_state_var = 1019 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_valencia }
+			province = { id = 6906 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_castello_de_la_plana }
+			province = { id = 6817 }
+		}
+	}
+
+	provinces = {
+		962 3799 3873 6817 6906 6959 11884
+	}
+	manpower = 4398199
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

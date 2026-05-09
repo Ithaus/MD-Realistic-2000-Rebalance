@@ -1,0 +1,46 @@
+state = {
+	id = 109
+	name = "STATE_109"
+
+	history = {
+		owner = LIT
+		victory_points = {
+			9483 1
+		}
+		victory_points = {
+			9438 1
+		}
+		victory_points = {
+			6296 3
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 5
+			nuclear_reactor = 1
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = LIT
+		set_variable = { productivity_state_var = 839 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kaunas }
+			province = { id = 6296 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_siauliai }
+			province = { id = 9483 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_panevezys }
+			province = { id = 9438 }
+		}
+	}
+
+	provinces = {
+		3288 3337 6296 6314 6360 6376 9246 9374 9404 9438 9483 9499 11342 14147
+	}
+	manpower = 1741327
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

@@ -1,0 +1,49 @@
+state = {
+	id = 96
+	name = "STATE_96"
+	manpower = 2869285
+	state_category = state_04
+	resources = {
+		oil = 2
+		tungsten = 11
+	}
+
+	history = {
+		owner = POR
+		victory_points = {
+			11805 4
+		}
+		victory_points = {
+			970 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 1
+			offices = 2
+			air_base = 5
+			11805 = {
+				naval_base = 6
+				land_facility = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.33 }
+		add_core_of = POR
+		set_variable = { productivity_state_var = 783 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_lisbon }
+			province = { id = 11805 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_algarve }
+			province = { id = 970 }
+		}
+	}
+
+	provinces = {
+		970 11805
+	}
+	buildings_max_level_factor = 1.000
+}

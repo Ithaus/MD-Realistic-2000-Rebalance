@@ -1,0 +1,28 @@
+state = {
+	id = 21
+	name = "STATE_21"
+	manpower = 56769
+	state_category = state_00
+
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+			internet_station = 1
+			air_base = 2
+			13010 = {
+				naval_base = 3
+			}
+		}
+		set_variable = { productivity_state_var = 1600 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_saint_george }
+			province = { id = 13010 }
+		}
+	}
+
+	provinces = {
+		13010
+	}
+}

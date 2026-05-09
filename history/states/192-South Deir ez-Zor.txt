@@ -1,0 +1,38 @@
+state = {
+	id = 192
+	name = "STATE_192"
+
+	resources = {
+		oil = 10
+	}
+
+	history = {
+		owner = SYR
+		victory_points = {
+			6312 2
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+		}
+		add_core_of = SYR
+		set_variable = { productivity_state_var = 812 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_deir_ez_zor }
+			province = { id = 6312 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_mayadin }
+			province = { id = 1493 }
+		}
+	}
+
+	provinces = {
+		2013 1493 6216 6312
+	}
+	manpower = 653954
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

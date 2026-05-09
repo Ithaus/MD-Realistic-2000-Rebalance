@@ -1,0 +1,37 @@
+state = {
+	id = 994
+	name = "STATE_994"
+
+	resources = {
+		oil = 10
+	}
+
+	history = {
+		owner = SYR
+		victory_points = {
+			3942 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = SYR
+		set_variable = { productivity_state_var = 812 }
+		add_province_modifier = {
+			static_modifiers = { terrain_at_tawrah }
+			province = { id = 3942 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_al_thawrah }
+			province = { id = 3004 }
+		}
+	}
+
+	provinces = {
+		3942 3004
+	}
+	manpower = 190485
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

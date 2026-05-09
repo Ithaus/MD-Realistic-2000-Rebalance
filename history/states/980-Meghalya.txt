@@ -1,0 +1,29 @@
+state = {
+	id = 980
+	name = "STATE_980"
+	manpower = 2337373
+	state_category = state_03
+
+	resources = {
+		rubber = 17
+	}
+
+
+	history = {
+		owner = RAJ
+		victory_points = {
+			11742 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = RAJ
+		add_core_of = MEG
+		set_variable = { productivity_state_var = 395 }
+	}
+
+	provinces = {
+		1497 11742
+	}
+}

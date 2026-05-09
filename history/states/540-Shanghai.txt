@@ -1,0 +1,50 @@
+state = {
+	id = 540
+	name = "STATE_540"
+	manpower = 22958797
+	state_category = state_13
+
+	resources = {
+		steel = 53
+	}
+
+	history = {
+		owner = CHI
+		victory_points = { 7014 20 } #Shanghai
+		victory_points = { 12076 2 } #Jinshan
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 13
+			arms_factory = 2
+			offices = 4
+			dockyard = 1
+			air_base = 10
+			12076 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+			7014 = {
+				# state owned stuff
+				naval_facility = 1
+			}
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+		set_variable = { productivity_state_var = 1135 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_shanghai }
+			province = { id = 7014 }
+		}
+	}
+
+	provinces = {
+		7014 12076 14611 14752
+	}
+}

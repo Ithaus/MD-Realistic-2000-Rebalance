@@ -1,0 +1,41 @@
+state = {
+	id = 875
+	name = "STATE_875"
+	resources = {
+		oil = 19
+	}
+
+	history = {
+		owner = VEN
+		victory_points = {
+			8113 15
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			offices = 6
+			arms_factory = 4
+			industrial_complex = 2
+			agriculture_district = 2
+			air_base = 6
+			8113 = {
+				naval_base = 6
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = VEN
+		set_variable = { productivity_state_var = 591 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_caracas }
+			province = { id = 8113 }
+		}
+	}
+
+	provinces = {
+		8113 10855 12254
+	}
+	manpower = 7864017
+	buildings_max_level_factor = 1.000
+	state_category = state_07
+}

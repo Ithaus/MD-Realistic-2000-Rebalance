@@ -1,0 +1,26 @@
+state = {
+	id = 844
+	name = "STATE_844"
+	manpower = 2079575
+	state_category = state_03
+
+	history = {
+		owner = ELS
+		add_core_of = ELS
+		victory_points = { 13093 3 } #San Miguel
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		set_variable = { productivity_state_var = 748 }
+		add_province_modifier = {
+			static_modifiers = { terrain_san_miguel }
+			province = { id = 13093 }
+		}
+	}
+
+	provinces = {
+		13093
+	}
+}

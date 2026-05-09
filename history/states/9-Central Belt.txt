@@ -1,0 +1,61 @@
+state = {
+	id = 9
+	name = "STATE_9"
+	manpower = 2886141
+	state_category = state_04
+
+	resources = {
+		oil = 26
+		steel = 8
+	}
+
+	history = {
+		owner = ENG
+		victory_points = {
+			6395 5
+		}
+		victory_points = {
+			9392 4
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 2
+			arms_factory = 1
+			dockyard = 2
+			9392 = {
+				naval_base = 5
+			}
+			6395 = {
+				naval_base = 8
+				naval_supply_hub = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		set_variable = { hydroelectric_energy_production_var = 1.459 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = ENG
+		add_core_of = SCO
+		set_variable = { productivity_state_var = 1060 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_edinburgh }
+			province = { id = 9392 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_glasgow }
+			province = { id = 6395 }
+		}
+	}
+
+	provinces = {
+		6300 6320 6395 9383 9392
+	}
+}

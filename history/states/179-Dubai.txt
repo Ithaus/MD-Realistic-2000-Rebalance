@@ -1,0 +1,43 @@
+state = {
+	id = 179
+	name = "STATE_179"
+
+	resources = {
+		oil = 23
+		aluminium = 25
+	}
+
+	history = {
+		owner = UAE
+		victory_points = {
+			3725 25
+		}
+		victory_points = {
+			10904 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 2
+			arms_factory = 2
+		}
+		add_core_of = UAE
+		set_variable = { productivity_state_var = 1365 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_dubai }
+			province = { id = 3725 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_ras_al_khaymah }
+			province = { id = 10904 }
+		}
+	}
+
+	provinces = {
+		10904 3709 3725
+	}
+	manpower = 2575939
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

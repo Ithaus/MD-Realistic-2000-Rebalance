@@ -1,0 +1,42 @@
+state = {
+	id = 547
+	name = "STATE_547"
+	manpower = 20856179
+	state_category = state_12
+
+	resources = {
+		steel = 53
+	}
+
+	history = {
+		owner = CHI
+		victory_points = {
+			11761 20
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 12
+			offices = 3
+			arms_factory = 4
+			air_base = 10
+			microchip_plant = 1
+			11761 = {
+				# NORINCO
+				land_facility = 1
+			}
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+		set_variable = { productivity_state_var = 1085 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_beijing }
+			province = { id = 11761 }
+		}
+	}
+
+	provinces = {
+		4140 9843 11761 3160 15667 15668 15669
+	}
+}

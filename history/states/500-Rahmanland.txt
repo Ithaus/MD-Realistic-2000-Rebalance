@@ -1,0 +1,40 @@
+state = {
+	id = 500
+	name = "STATE_500"
+
+	resources = {
+		oil = 2
+	}
+
+	history = {
+		owner = BRM
+		victory_points = {
+			12090 5
+		}
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			12090 = {
+				naval_base = 2
+			}
+
+		}
+		add_core_of = ARK
+		add_core_of = BRM
+		set_variable = { productivity_state_var = 815 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_sittwe }
+			province = { id = 12090 }
+		}
+	}
+
+	provinces = {
+		1014 12090
+	}
+	manpower = 1349574
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

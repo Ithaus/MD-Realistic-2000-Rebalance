@@ -1,0 +1,34 @@
+state = {
+	id = 1081
+	name = "STATE_1081"
+	resources = {
+		oil = 31
+	}
+
+	history = {
+		owner = SAU
+		victory_points = {
+			14430 3
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_core_of = SAU
+		add_core_of = NEJ
+		add_core_of = QTF
+		set_variable = { productivity_state_var = 1173 }
+		add_province_modifier = {
+			static_modifiers = { terrain_najran }
+			province = { id = 14430 }
+		}
+	}
+
+	provinces = {
+		1920 14398 14399 14430 14579
+	}
+	manpower = 297833
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

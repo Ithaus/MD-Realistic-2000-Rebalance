@@ -1,0 +1,25 @@
+state = {
+	id = 1003
+	name = "STATE_1003"
+
+	history = {
+		owner = GUB
+		add_core_of = GUB
+		victory_points = {
+			12747 2
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+		}
+		set_variable = { productivity_state_var = 714 }
+	}
+
+	provinces = {
+		12747 6894
+	}
+	manpower = 307737
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

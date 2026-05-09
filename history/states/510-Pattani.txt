@@ -1,0 +1,41 @@
+state = {
+	id = 510
+	name = "STATE_510"
+	manpower = 462060
+	state_category = state_05
+
+	resources = {
+		oil = 2
+		rubber = 173
+	}
+
+	history = {
+		owner = SIA
+		victory_points = { 7236 5 } #Hat Yai
+		victory_points = { 12131 1 } #Yala
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 4
+
+			7236 = {
+				naval_base = 6
+			}
+
+		}
+		add_core_of = SIA
+		set_variable = { productivity_state_var = 477 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_hat_yai }
+			province = { id = 7236 }
+		}
+	}
+
+	provinces = {
+		7236 12131 4297 1279
+	}
+}

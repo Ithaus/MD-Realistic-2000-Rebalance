@@ -1,0 +1,48 @@
+state = {
+	id = 497
+	name = "STATE_497"
+
+	resources = {
+		tungsten = 7
+	}
+
+	history = {
+		owner = WAA
+		add_core_of = WAA
+		add_core_of = BRM
+		add_core_of = SHN
+		add_core_of = NHN
+
+		victory_points = {
+			138 6
+		}
+
+		victory_points = {
+			14519 1
+		}
+
+		victory_points = {
+			7400 1
+		}
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+		}
+
+		set_variable = { productivity_state_var = 363 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_pangkham }
+			province = { id = 138 }
+		}
+	}
+
+	provinces = {
+		132 138 4210 7400 14046 14519 14524 14525
+	}
+	manpower = 792306
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

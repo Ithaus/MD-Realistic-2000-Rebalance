@@ -1,0 +1,39 @@
+state = {
+	id = 652
+	name = "STATE_652"
+	manpower = 10535917
+	buildings_max_level_factor = 1.000
+	state_category = state_09
+
+	history = {
+		owner = SOV
+		add_core_of = SOV
+		victory_points = { 6380 20 }
+		victory_points = { 16254 3 }
+		victory_points = { 16255 1 }
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 2
+			offices = 2
+			arms_factory = 1
+			anti_air_building = 2
+			6380 = {
+				landmark_kremlin = {
+					level = 1
+				}
+				land_facility = 1
+			}
+		}
+		set_variable = { productivity_state_var = 850 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_moscow }
+			province = { id = 6380 }
+		}
+	}
+
+	provinces = {
+		6380 16254 16255
+	}
+}

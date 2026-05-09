@@ -1,0 +1,68 @@
+state = {
+	id = 521
+	name = "STATE_521"
+
+	resources = {
+		steel = 3
+		tungsten = 3
+	}
+
+	history = {
+		owner = VIE
+		victory_points = {
+			4397 5
+		}
+		victory_points = {
+			4379 5
+		}
+		victory_points = {
+			10309 5
+		}
+		victory_points = {
+			4334 5
+		}
+		victory_points = {
+			11936 1
+		}
+		victory_points = {
+			4255 1
+		}
+		victory_points = {
+			7280 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 2
+			10309 = {
+				naval_base = 4
+
+			}
+
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		add_core_of = VIE
+		set_variable = { productivity_state_var = 609 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_vinh }
+			province = { id = 4397 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_da_nang }
+			province = { id = 10309 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_quy_nhon }
+			province = { id = 4334 }
+		}
+	}
+
+	provinces = {
+		1300 1302 4255 4334 4379 4397 7229 7280 9988 10016 10137 10180 10309 11909 11936 12297
+	}
+	manpower = 13299263
+	buildings_max_level_factor = 1.000
+	state_category = state_10
+}

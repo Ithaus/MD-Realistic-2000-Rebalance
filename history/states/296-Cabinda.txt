@@ -1,0 +1,32 @@
+state = {
+	id = 296
+	name = "STATE_296"
+	manpower = 693331
+	state_category = state_01
+
+	resources = {
+		oil = 33
+	}
+
+	history = {
+		owner = AGL
+		add_core_of = AGL
+		add_core_of = UNI
+		add_core_of = CAB
+		add_claim_by = DRC
+		victory_points = { 2115 5 } #Cabinda
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			2115 = {
+				naval_base = 2
+			}
+		}
+		set_variable = { productivity_state_var = 743 }
+	}
+
+	provinces = {
+		2115 14606
+	}
+}

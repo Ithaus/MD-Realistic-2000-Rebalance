@@ -1,0 +1,44 @@
+
+state = {
+	id = 89
+	name = "STATE_89"
+	resources = {
+		aluminium = 12
+		steel = 3
+	}
+
+	history = {
+		owner = SPR
+		victory_points = {
+			6749 2
+		}
+		victory_points = {
+			11707 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			11707 = {
+				naval_base = 2
+			}
+			6749 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.15 }
+		add_core_of = SPR
+		set_variable = { productivity_state_var = 1019 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_gijon }
+			province = { id = 6749 }
+		}
+	}
+
+	provinces = {
+		6749 9719 11707
+	}
+	manpower = 848428
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

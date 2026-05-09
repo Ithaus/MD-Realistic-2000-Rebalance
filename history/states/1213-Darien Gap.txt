@@ -1,0 +1,21 @@
+state = {
+	id = 1213
+	name = "STATE_1213"
+	manpower = 107857
+	state_category = state_01
+	buildings_max_level_factor = 1.000
+
+	history = {
+		owner = PAN
+		add_core_of = PAN
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+		}
+		set_variable = { productivity_state_var = 215 }
+	}
+
+	provinces = {
+		7630 9732 10482 16287
+	}
+}

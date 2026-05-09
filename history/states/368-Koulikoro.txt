@@ -1,0 +1,37 @@
+state = {
+	id = 368
+	name = "STATE_368"
+
+	resources = {
+		steel = 5
+		aluminium = 1
+	}
+	history = {
+		owner = MAL
+		victory_points = {
+			12751 10
+		}
+		victory_points = {
+			14829 5
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+			industrial_complex = 1
+		}
+		add_core_of = MAL
+		set_variable = { productivity_state_var = 518 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_bamako }
+			province = { id = 12751 }
+		}
+	}
+
+	provinces = {
+		10812 12751 9231 9247 12838 14829 14834 14835
+	}
+	manpower = 5357473
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

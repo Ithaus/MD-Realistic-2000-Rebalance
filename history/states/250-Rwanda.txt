@@ -1,0 +1,37 @@
+state = {
+	id = 250
+	name = "STATE_250"
+	resources = {
+		tungsten = 5
+	}
+
+	history = {
+		owner = RWA
+		victory_points = {
+			9962 15
+		}
+		victory_points = {
+			6542 2
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+
+		}
+		add_core_of = RWA
+		set_variable = { productivity_state_var = 388 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kigali }
+			province = { id = 9962 }
+		}
+	}
+
+	provinces = {
+		4201 9962 6542 13405 13717
+	}
+	manpower = 8208133
+	buildings_max_level_factor = 1.000
+	state_category = state_07
+}

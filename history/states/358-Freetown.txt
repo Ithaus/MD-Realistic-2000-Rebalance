@@ -1,0 +1,40 @@
+state = {
+	id = 358
+	name = "STATE_358"
+	resources = {
+		aluminium = 13
+		
+	}
+
+	history = {
+		owner = SIE
+		victory_points = {
+			2038 10
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			2038 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = SIE
+		add_core_of = AFR
+		set_variable = { productivity_state_var = 473 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_freetown }
+			province = { id = 2038 }
+		}
+	}
+
+	provinces = {
+		2038 7403
+	}
+	manpower = 4413766
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

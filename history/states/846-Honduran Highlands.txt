@@ -1,0 +1,31 @@
+state = {
+	id = 846
+	name = "STATE_846"
+
+	history = {
+		owner = HON
+		add_core_of = HON
+		victory_points = {
+			12865 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+			air_base = 2
+		}
+		set_variable = { productivity_state_var = 533 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_tegucigalpa }
+			province = { id = 12865 }
+		}
+	}
+
+	provinces = {
+		8017 12865 9867
+	}
+	manpower = 3719249
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

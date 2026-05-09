@@ -1,0 +1,40 @@
+state = {
+	id = 903
+	name = "STATE_903"
+	manpower = 6760935
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+
+	resources = {
+		tungsten = 6
+	}
+
+	history = {
+		owner = PRU
+		add_core_of = PRU
+		victory_points = { 5190 5 }
+		victory_points = { 12869 5 }
+		victory_points = { 8149 3 }
+		victory_points = { 8221 3 }
+		victory_points = { 12969 1 }
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 2
+			5190 = {
+				naval_base = 2
+			}
+		}
+
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		set_variable = { hydroelectric_energy_production_var = 0.432 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 558 }
+	}
+
+	provinces = {
+		2156 5190 8149 8199 12869 12969 8221 8247 9513 9526 9538 9549 9659
+	}
+}

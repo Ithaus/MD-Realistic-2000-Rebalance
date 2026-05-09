@@ -1,0 +1,42 @@
+state = {
+	id = 364
+	name = "STATE_364"
+
+	resources = {
+		steel = 9
+	}
+	history = {
+		owner = SEN
+		victory_points = {
+			4948 10
+		}
+		victory_points = {
+			7972 4
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 4
+			4948 = {
+				naval_base = 4
+
+			}
+			industrial_complex = 1
+
+		}
+		add_core_of = SEN
+		set_variable = { productivity_state_var = 654 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_dakar }
+			province = { id = 4948 }
+		}
+	}
+
+	provinces = {
+		4948 7972 6771
+	}
+	manpower = 7041481
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

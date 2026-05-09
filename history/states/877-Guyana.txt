@@ -1,0 +1,38 @@
+state = {
+	id = 877
+	name = "STATE_877"
+	resources = {
+		aluminium = 3
+	}
+
+	history = {
+		owner = GUY
+		add_core_of = GUY
+		victory_points = {
+			4982 3
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+			industrial_complex = 1
+			4982 = {
+				naval_base = 2
+			}
+		}
+
+		set_variable = { productivity_state_var = 666 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_georgetown }
+			province = { id = 4982 }
+		}
+	}
+
+	provinces = {
+		4982 12340 12400
+	}
+	manpower = 530379
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

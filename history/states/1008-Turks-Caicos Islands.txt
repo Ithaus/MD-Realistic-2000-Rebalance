@@ -1,0 +1,29 @@
+state = {
+	id = 1008
+	name = "STATE_1008"
+	manpower = 20039
+	state_category = state_00
+
+	history = {
+		owner = ENG
+		victory_points = {
+			13324 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 1
+			13324 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { productivity_state_var = 1000 }
+		add_province_modifier = {
+			static_modifiers = { terrain_cockburn_town }
+			province = { id = 13324 }
+		}
+	}
+
+	provinces = {
+		13324
+	}
+}

@@ -1,0 +1,64 @@
+state = {
+	id = 526
+	name = "STATE_526"
+
+	history = {
+		owner = CHI
+		victory_points = {
+			11169 2
+		}
+		victory_points = {
+			11146 1
+		}
+		victory_points = {
+			11156 1
+		}
+		victory_points = {
+			11167 1
+		}
+		buildings = {
+			11146 = {
+				naval_base = 1
+			}
+			11156 = {
+				naval_base = 1
+			}
+			11167 = {
+				naval_base = 1
+			}
+			11169 = {
+				naval_base = 1
+			}
+
+		}
+		add_claim_by = VIE
+		add_claim_by = TAI
+		add_claim_by = MAY
+		add_claim_by = PHI
+		set_variable = { productivity_state_var = 310 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_subi_reef }
+			province = { id = 11167 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_mischief_reef }
+			province = { id = 11156 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_fiery_cross_reef }
+			province = { id = 11169 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_cuarteron_reef }
+			province = { id = 11146 }
+		}
+	}
+
+	provinces = {
+		11146 11156 11167 11169
+	}
+	manpower = 1
+	buildings_max_level_factor = 1.000
+	state_category = state_inhospitable
+}

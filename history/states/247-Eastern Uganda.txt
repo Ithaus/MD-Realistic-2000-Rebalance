@@ -1,0 +1,25 @@
+state = {
+	id = 247
+	name = "STATE_247"
+
+	history = {
+		owner = UGA
+		victory_points = {
+			12929 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = UGA
+		set_variable = { productivity_state_var = 861 }
+	}
+
+	provinces = {
+		12929 6586 13725 13726 13727
+	}
+	manpower = 5675190
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

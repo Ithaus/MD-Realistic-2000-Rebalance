@@ -1,0 +1,102 @@
+state = {
+	id = 541
+	name = "STATE_541"
+	manpower = 41413698
+	state_category = state_16
+
+	resources = {
+		oil = 3
+		steel = 89
+	}
+
+	history = {
+		owner = CHI
+		victory_points = {
+			11928 5
+		}
+		victory_points = {
+			4001 5
+		}
+		victory_points = {
+			7142 5
+		}
+		victory_points = {
+			4091 1
+		}
+		victory_points = {
+			10095 1
+		}
+		victory_points = {
+			1089 1
+		}
+		victory_points = {
+			9953 1
+		}
+		victory_points = {
+			11973 5
+		}
+		victory_points = {
+			4123 5
+		}
+		victory_points = {
+			1029 5
+		}
+		victory_points = {
+			1121 1
+		}
+		victory_points = {
+			10095 1
+		}
+		victory_points = {
+			1076 1
+		}
+		victory_points = {
+			1001 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 6
+			arms_factory = 2
+			dockyard = 1
+			offices = 1
+			air_base = 6
+			agriculture_district = 2
+			11928 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+		set_variable = { productivity_state_var = 875 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_huaian }
+			province = { id = 4123 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_xuzhou }
+			province = { id = 11973 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_yancheng }
+			province = { id = 12067 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_lianyungang }
+			province = { id = 1029 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_shuyang }
+			province = { id = 1076 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_yangzhou }
+			province = { id = 4001 }
+		}
+	}
+
+	provinces = {
+		1001 1029 1076 1089 1121 4001 4005 4031 4082 4091 4123 7142 7181 7200 9953 10095 11928 11973 12055 12067 13144 14302 16157 16211 16212 16213 16214
+	}
+}

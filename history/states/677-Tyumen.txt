@@ -1,0 +1,31 @@
+state = {
+	id = 677
+	name = "STATE_677"
+	manpower = 3441049
+	state_category = state_04
+
+	resources = {
+		oil = 36
+	}
+
+	history = {
+		owner = SOV
+
+		victory_points = { 4824 10 } #Tyumen
+		victory_points = { 4659 3 } #Tobolsk
+		victory_points = { 4780 3 } #Ishim
+		victory_points = { 4209 1 } #Zavodoukovsk
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = SOV
+		set_variable = { productivity_state_var = 570 }
+	}
+
+	provinces = {
+		4780 6787 12521 4209 1387 4824 4754 1880 7833 12390 3472 10670 9512 7846 7774 4659 14111 14167
+	}
+}

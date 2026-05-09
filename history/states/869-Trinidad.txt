@@ -1,0 +1,43 @@
+state = {
+	id = 869
+	name = "STATE_869"
+	manpower = 1322455
+	state_category = state_02
+
+	resources = {
+	   oil = 8
+	}
+
+	history = {
+		owner = TRI
+		add_core_of = TRI
+		victory_points = { 3284 5 } #Port of Spain
+		victory_points = { 13012 1 } #Tobago
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 3
+
+			3284 = {
+				naval_base = 3
+			}
+
+		}
+
+		set_variable = { productivity_state_var = 1166 }
+		add_province_modifier = {
+			static_modifiers = { terrain_tobago }
+			province = { id = 13012 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_port_of_spain }
+			province = { id = 3284 }
+		}
+	}
+
+	provinces = {
+		3284 13012
+	}
+}

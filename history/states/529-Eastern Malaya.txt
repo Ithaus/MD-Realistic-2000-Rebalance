@@ -1,0 +1,53 @@
+state = {
+	id = 529
+	name = "STATE_529"
+
+	resources = {
+		oil = 20
+		aluminium = 9
+		rubber = 51
+	}
+
+	history = {
+		owner = MAY
+		victory_points = {
+			6029 5
+		}
+		victory_points = {
+			7399 5
+		}
+		victory_points = {
+			12199 3
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 2
+			offices = 1
+			6029 = {
+				naval_base = 2
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 1.000 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = MAY
+		set_variable = { productivity_state_var = 532 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kota_bharu }
+			province = { id = 6029 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kuantan }
+			province = { id = 7399 }
+		}
+	}
+
+	provinces = {
+		1348 1392 4355 4367 4384 7329 7399 10227 12199 12255 12271 6013 6021 6022 6023 6029
+	}
+	manpower = 3305167
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

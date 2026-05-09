@@ -1,0 +1,41 @@
+state = {
+	id = 60
+	name = "STATE_60"
+	resources = {
+		
+		steel = 10
+	}
+
+	history = {
+		owner = FRA
+		victory_points = {
+			9737 2
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			offices = 1
+			industrial_complex = 1
+			air_base = 3
+			9737 = {
+				naval_base = 3
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.15 }
+		add_core_of = FRA
+		set_variable = { productivity_state_var = 1035 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_bordeaux }
+			province = { id = 9737 }
+		}
+	}
+
+	provinces = {
+		743 3740 6762 6775 6777 6792 9717 9737 9751 11565 11593 11697 11720
+	}
+	manpower = 3004731
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

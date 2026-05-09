@@ -1,0 +1,43 @@
+state = {
+	id = 622
+	name = "STATE_622"
+
+	resources = {
+		tungsten = 6
+		rubber = 24
+	}
+
+	history = {
+		owner = ACE
+		add_core_of = ACE
+		add_claim_by = IND
+		victory_points = {
+			7658 5
+		}
+		victory_points = {
+			10509 2
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			7658 = {
+				naval_base = 2
+			}
+		}
+
+		set_variable = { productivity_state_var = 327 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_aceh }
+			province = { id = 7658 }
+		}
+	}
+
+	provinces = {
+		7658 10509 12488 6109 6112 6113 14174
+	}
+	manpower = 4166078
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

@@ -1,0 +1,29 @@
+state = {
+	id = 24
+	name = "STATE_24"
+	manpower = 5153
+	state_category = state_00
+
+	history = {
+		owner = ENG
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.45 }
+		add_core_of = STH
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			13016 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { productivity_state_var = 700 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_saint_halena }
+			province = { id = 13016 }
+		}
+	}
+
+	provinces = {
+		13016
+	}
+}

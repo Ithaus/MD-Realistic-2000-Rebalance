@@ -1,0 +1,46 @@
+state = {
+	id = 713
+	name = "STATE_713"
+	resources = {
+		oil = 17
+		aluminium = 2
+	}
+
+	history = {
+		owner = AZE
+		add_core_of = AZE
+		victory_points = { 7661 16 }
+		victory_points = { 4477 1 }
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 6
+			7661 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		set_variable = { productivity_state_var = 635 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_baku }
+			province = { id = 7661 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_mingechevir }
+			province = { id = 4477 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_shirvan }
+			province = { id = 1536 }
+		}
+	}
+
+	provinces = {
+		1536 4477 4614 6784 7495 7661
+	}
+	manpower = 4133130
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

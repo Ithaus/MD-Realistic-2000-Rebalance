@@ -1,0 +1,43 @@
+state = {
+	id = 112
+	name = "STATE_112"
+
+	resources = {
+		steel = 12
+	}
+	history = {
+		owner = POL
+		victory_points = {
+			9427 6
+		}
+		victory_points = {
+			3497 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			arms_factory = 1
+			offices = 1
+			air_base = 3
+			industrial_complex = 1
+		}
+		add_core_of = POL
+		set_variable = { productivity_state_var = 660 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_krakow }
+			province = { id = 9427 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kielce }
+			province = { id = 3497 }
+		}
+	}
+
+	provinces = {
+		562 3497 3586 6416 9427
+	}
+	manpower = 3992037
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

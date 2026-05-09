@@ -1,0 +1,30 @@
+state = {
+	id = 190
+	name = "STATE_190"
+
+	history = {
+		owner = SYR
+		victory_points = {
+			11127 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 2
+		}
+		add_core_of = SYR
+		set_variable = { productivity_state_var = 812 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_idlib }
+			province = { id = 11127 }
+		}
+	}
+
+	provinces = {
+		7140 11127
+	}
+	manpower = 1140938
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

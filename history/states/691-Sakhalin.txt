@@ -1,0 +1,36 @@
+state = {
+	id = 691
+	name = "STATE_691"
+	manpower = 538366
+	state_category = state_01
+
+	resources = {
+		oil = 6
+	}
+
+	history = {
+		owner = SOV
+		add_core_of = SOV
+
+		victory_points = { 12446 5 } #Yuzhno-Sakhalinsk
+		victory_points = { 855 3 } #Okha
+		victory_points = { 1820 1 } #Poronaysk
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			radar_station = 2
+			air_base = 1
+			12446 = {
+				naval_base = 2
+			}
+		}
+
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		set_variable = { productivity_state_var = 570 }
+	}
+
+	provinces = {
+		1322 1820 12446 855 1742 1755
+	}
+}

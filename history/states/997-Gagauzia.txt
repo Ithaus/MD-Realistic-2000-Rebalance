@@ -1,0 +1,33 @@
+state = {
+	id = 997
+	name = "STATE_997"
+
+	history = {
+		owner = MLV
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+		add_core_of = MLV
+		add_core_of = ROM
+		add_core_of = GGZ
+		victory_points = {
+			13302 1
+		}
+
+		set_variable = { productivity_state_var = 336 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_komrat }
+			province = { id = 13302 }
+		}
+	}
+
+	provinces = {
+		13302
+	}
+	manpower = 135787
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

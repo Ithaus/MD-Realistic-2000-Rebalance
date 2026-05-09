@@ -1,0 +1,35 @@
+state = {
+	id = 595
+	name = "STATE_595"
+	manpower = 6672729
+	state_category = state_07
+
+	history = {
+		owner = HKG
+		add_core_of = HKG
+		add_core_of = TAI
+		victory_points = { 10062 10 } #Hong Kong
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			offices = 2
+			air_base = 2
+			10062 = {
+				naval_base = 4
+			}
+		}
+
+		set_variable = { productivity_state_var = 789 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_hong_kong }
+			province = { id = 10062 }
+		}
+	}
+
+	provinces = {
+		10062
+	}
+}

@@ -1,0 +1,29 @@
+state = {
+	id = 1090
+	name = "STATE_1090"
+
+	history = {
+		owner = UKR
+		victory_points = {
+			3452 2
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+		}
+		add_core_of = UKR
+		set_variable = { productivity_state_var = 510 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kirovohrad }
+			province = { id = 3452 }
+		}
+	}
+
+	provinces = {
+		409 434 3452 6451 6478 11409
+	}
+	manpower = 1039080
+	state_category = state_02
+}

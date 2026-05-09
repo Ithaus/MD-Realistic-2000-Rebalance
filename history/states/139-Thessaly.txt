@@ -1,0 +1,53 @@
+state = {
+	id = 139
+	name = "STATE_139"
+	resources = {
+		
+		oil = 2
+		aluminium = 2
+	}
+
+	history = {
+		owner = GRE
+		victory_points = {
+			863 1
+		}
+		victory_points = {
+			3973 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 4
+			9805 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = GRE
+		set_variable = { productivity_state_var = 798 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_volos }
+			province = { id = 3973 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_larissa }
+			province = { id = 863 }
+		}
+
+		add_province_modifier = {
+			static_modifiers = { terrain_elbistan }
+			province = { id = 3980 }
+		}
+
+		}
+
+	provinces = {
+		863 3864 3914 3973 3980 6930 9805 11786
+	}
+	manpower = 1043304
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

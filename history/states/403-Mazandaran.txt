@@ -1,0 +1,41 @@
+state = {
+	id = 403
+	name = "STATE_403"
+
+	history = {
+		owner = PER
+		victory_points = {
+			10385 2
+		}
+		victory_points = {
+			10768 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			industrial_complex = 2
+			agriculture_district = 1
+			10385 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PER
+		set_variable = { productivity_state_var = 500 }
+		add_province_modifier = {
+			static_modifiers = { terrain_amol }
+			province = { id = 10768 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_sari }
+			province = { id = 10385 }
+		}
+	}
+
+	provinces = {
+		4499 4580 10385 10768 14616 14617
+	}
+	manpower = 2823325
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

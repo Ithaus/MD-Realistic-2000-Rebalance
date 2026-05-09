@@ -1,0 +1,30 @@
+state = {
+	id = 148
+	name = "STATE_148"
+
+	history = {
+		owner = MLV
+		victory_points = {
+			6600 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		add_core_of = MLV
+		add_core_of = ROM
+		set_variable = { productivity_state_var = 336 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_balti }
+			province = { id = 6600 }
+		}
+	}
+
+	provinces = {
+		565 3577 6600 11705 523
+	}
+	manpower = 1273612
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

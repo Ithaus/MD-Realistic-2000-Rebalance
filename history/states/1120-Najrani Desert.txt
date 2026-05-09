@@ -1,0 +1,30 @@
+state = {
+	id = 1120
+	name = "STATE_1120"
+
+	impassable = yes
+
+	history = {
+		owner = SAU
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = SAU
+		add_core_of = NEJ
+		add_core_of = QTF
+		set_variable = { productivity_state_var = 1173 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_najrani_desert }
+			province = { id = 14633 }
+		}
+	}
+
+	provinces = {
+		14633
+	}
+	manpower = 201
+	buildings_max_level_factor = 1.000
+	state_category = state_inhospitable
+}

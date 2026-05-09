@@ -1,0 +1,48 @@
+state = {
+	id = 452
+	name = "STATE_452"
+	manpower = 75749298
+	state_category = state_18
+
+	resources = {
+		steel = 4
+	}
+
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
+		add_core_of = KAM
+		victory_points = { 4245 10 }
+		victory_points = { 4204 5 }
+		victory_points = { 4062 1 }
+		victory_points = { 7565 1 }
+		victory_points = { 1609 1 }
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			arms_factory = 2
+			industrial_complex = 5
+			dockyard = 2
+			offices = 1
+			air_base = 10
+			1159 = {
+				naval_base = 6
+			}
+			4062 = {
+				naval_base = 2
+			}
+		}
+
+		set_variable = { productivity_state_var = 450 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kolkata }
+			province = { id = 4245 }
+		}
+	}
+
+	provinces = {
+		1159 1609 4062 4204 4245 4644 7565 10077 12050 14048
+	}
+}

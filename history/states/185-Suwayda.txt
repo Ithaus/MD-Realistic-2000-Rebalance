@@ -1,0 +1,31 @@
+state = {
+	id = 185
+	name = "STATE_185"
+
+	history = {
+		owner = SYR
+		victory_points = {
+			11097 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		add_core_of = SYR
+		add_core_of = DRU
+		set_variable = { productivity_state_var = 812 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_al_suwayda }
+			province = { id = 11097 }
+		}
+
+		}
+
+	provinces = {
+		4486 11097
+	}
+	manpower = 285044
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

@@ -1,0 +1,38 @@
+state = {
+	id = 145
+	name = "STATE_145"
+	manpower = 954948
+
+	resources = {
+		oil = 2
+	}
+
+	state_category = state_01
+
+	history = {
+		owner = CYP
+		add_core_of = CYP
+		add_core_of = NCY
+
+		victory_points = {
+			11984 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 2
+			offices = 1
+			11984 = {
+				naval_base = 4
+			}
+		}
+
+		set_variable = { productivity_state_var = 912 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_nicosia }
+			province = { id = 11984 }
+		}
+	}
+	provinces = { 11984 }
+}

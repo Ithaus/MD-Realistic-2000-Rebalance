@@ -1,0 +1,32 @@
+state = {
+	id = 943
+	name = "STATE_943"
+	manpower = 1
+
+	state_category = state_inhospitable
+
+	history = {
+		owner = CHI
+		victory_points = {
+			1370 2
+		}
+		buildings = {
+			infrastructure = 0
+			1370 = {
+				naval_base = 1
+			}
+		}
+		add_claim_by = TAI
+		add_claim_by = PHI
+		set_variable = { productivity_state_var = 310 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_scarborough }
+			province = { id = 1370 }
+		}
+	}
+
+	provinces = {
+		1370
+	}
+}

@@ -1,0 +1,41 @@
+state = {
+	id = 736
+	name = "STATE_736"
+	resources = {
+		steel = 12
+	}
+	provinces = {
+		1221 10236 10306 12236 16321 16322 16323 16324 16325 16344
+	}
+	manpower = 9581607
+	buildings_max_level_factor = 1
+	state_category = state_13
+	local_supplies = 0
+
+	history = {
+		owner = PHI
+		add_core_of = PHI
+
+		victory_points = { 1221 10 } # Batangas
+		victory_points = { 16323 5 } # Calamba
+		victory_points = { 16321 3 } # Cavite
+		victory_points = { 12236 1 } # Lucena
+
+
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 1
+			agriculture_district = 1
+		}
+
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		set_variable = { geothermal_energy_production_var = 0.736 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		set_variable = { productivity_state_var = 464 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_batangas }
+			province = { id = 1221 }
+		}
+	}
+}

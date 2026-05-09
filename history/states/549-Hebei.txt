@@ -1,0 +1,70 @@
+state = {
+	id = 549
+	name = "STATE_549"
+	manpower = 50416675
+	state_category = state_16
+
+	resources = {
+		oil = 3
+		aluminium = 14
+		steel = 13
+	}
+
+	history = {
+		owner = CHI
+		victory_points = {
+			4190 10
+		}
+		victory_points = {
+			1169 5
+		}
+		victory_points = {
+			11944 1
+		}
+		victory_points = {
+			1188 1
+		}
+		victory_points = {
+			4032 1
+		}
+		victory_points = {
+			10022 1
+		}
+		victory_points = {
+			7109 5
+		}
+		victory_points = {
+			1134 1
+		}
+		victory_points = {
+			9969 1
+		}
+		victory_points = {
+			12026 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			offices = 1
+			industrial_complex = 5
+			arms_factory = 2
+			fuel_silo = 2
+		}
+		add_core_of = CHI
+		add_core_of = TAI
+		set_variable = { productivity_state_var = 580 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_shijiazhuang }
+			province = { id = 4190 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_handan }
+			province = { id = 1169 }
+		}
+	}
+
+	provinces = {
+		1134 1169 1188 4032 4058 4093 4190 6828 7000 7092 7109 9969 10003 10022 11944 11980 11996 12026 12062 15656
+	}
+}

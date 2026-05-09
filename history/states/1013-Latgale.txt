@@ -1,0 +1,30 @@
+state = {
+	id = 1013
+	name = "STATE_1013"
+
+	history = {
+		owner = LAT
+		victory_points = {
+			310 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+
+		}
+		add_core_of = LAT
+		set_variable = { productivity_state_var = 700 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_daugavpils }
+			province = { id = 310 }
+		}
+	}
+
+	provinces = {
+		310 341 3298 9275 13931
+	}
+	manpower = 335102
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

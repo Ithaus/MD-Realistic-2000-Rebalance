@@ -1,0 +1,85 @@
+state = {
+	id = 601
+	name = "STATE_601"
+
+	resources = {
+		steel = 13
+		aluminium = 4
+		tungsten = 20
+		oil = 5
+	}
+
+	history = {
+		owner = NKO
+		victory_points = {
+			6928 6
+		}
+		victory_points = {
+			6822 5
+		}
+		victory_points = {
+			6922 2
+		}
+		victory_points = {
+			6944 1
+		}
+		victory_points = {
+			11878 1
+		}
+		victory_points = {
+			898 1
+		}
+		victory_points = {
+			3852 1
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 6
+			6944 = {
+				naval_base = 2
+			}
+			3852 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = NKO
+		add_core_of = KOR
+		set_variable = { productivity_state_var = 350 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_rason }
+			province = { id = 6944 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_chongjin }
+			province = { id = 6822 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_hyesan }
+			province = { id = 11878 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kimchaek }
+			province = { id = 6922 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_sinpo }
+			province = { id = 3852 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_hamhung }
+			province = { id = 6928 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_tanchon }
+			province = { id = 3852 }
+		}
+	}
+
+	provinces = {
+		852 898 959 3803 3852 3860 3904 3981 6822 6922 6928 6944 9899 11878 3191 3210 3245
+	}
+	manpower = 6417091
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

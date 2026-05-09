@@ -1,0 +1,32 @@
+state = {
+	id = 201
+	name = "STATE_201"
+	manpower = 441526
+	state_category = state_01
+
+	history = {
+		owner = HEZ
+		add_core_of = HEZ
+		add_core_of = LEB
+		victory_points = { 11919 1 } #Tyre
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 1
+			stronghold_network = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		set_variable = { productivity_state_var = 759 }
+		add_dynamic_modifier = { modifier = HEZ_hezbollah_state_dyanic_modifiers }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_tyre }
+			province = { id = 11919 }
+		}
+	}
+
+	provinces = {
+		11919
+	}
+}

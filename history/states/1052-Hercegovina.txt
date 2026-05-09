@@ -1,0 +1,31 @@
+
+state = {
+	id = 1052
+	name = "STATE_1052"
+
+	history = {
+		owner = BOS
+		victory_points = {
+			9894 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+		}
+		add_core_of = BOS
+		add_core_of = HZG
+		set_variable = { productivity_state_var = 542 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_mostar }
+			province = { id = 9894 }
+		}
+	}
+
+	provinces = {
+	   3985 6942 9894 11816 13933
+	}
+	manpower = 441356
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

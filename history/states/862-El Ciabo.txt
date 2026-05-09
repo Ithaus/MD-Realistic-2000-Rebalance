@@ -1,0 +1,38 @@
+state = {
+	id = 862
+	name = "STATE_862"
+	manpower = 2684805
+	state_category = state_04
+
+	resources = {
+		steel = 1
+		tungsten = 1
+	}
+
+	history = {
+		owner = DOM
+		add_core_of = DOM
+		victory_points = { 4598 5 } #Santiago
+		victory_points = { 10484 3 } #San Francisco
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		set_variable = { productivity_state_var = 450 }
+		add_province_modifier = {
+			static_modifiers = { terrain_DOM_santiago }
+			province = { id = 4598 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_DOM_san_francisco }
+			province = { id = 10484 }
+		}
+	}
+
+	provinces = {
+		4598 10484
+	}
+}

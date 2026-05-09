@@ -1,0 +1,30 @@
+state = {
+	id = 169
+	name = "STATE_169"
+
+	history = {
+		owner = IRQ
+		victory_points = {
+			11248 5
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			arms_factory = 1
+		}
+		add_core_of = IRQ
+		set_variable = { productivity_state_var = 505 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_najaf }
+			province = { id = 11248 }
+		}
+	}
+
+	provinces = {
+		 10744 10876 11248 14517
+	}
+	manpower = 1092549
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

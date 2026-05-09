@@ -1,0 +1,30 @@
+state = {
+	id = 486
+	name = "STATE_486"
+
+	history = {
+		owner = OMA
+		victory_points = {
+			11179 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			air_base = 4
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = OMA
+		set_variable = { productivity_state_var = 624 }
+		add_province_modifier = {
+			static_modifiers = { terrain_ras_hilf }
+			province = { id = 11179 }
+		}
+	}
+
+	provinces = {
+		11179
+	}
+	manpower = 5990
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

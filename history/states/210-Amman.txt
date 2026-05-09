@@ -1,0 +1,40 @@
+state = {
+	id = 210
+	name = "STATE_210"
+	manpower = 4055483
+	state_category = state_05
+
+	resources = {
+		aluminium = 2
+	}
+
+	history = {
+		owner = JOR
+		victory_points = { 7151 28 } #Amman
+		victory_points = { 7170 5 } #Irbid
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+			arms_factory = 1
+			air_base = 6
+		}
+		add_core_of = JOR
+		set_variable = { productivity_state_var = 599 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_amman }
+			province = { id = 7151 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_irbid }
+			province = { id = 7170 }
+		}
+	}
+
+	provinces = {
+		  1 4574 7170 3309 7151 10089
+
+		}
+}

@@ -1,0 +1,40 @@
+state = {
+	id = 322
+	name = "STATE_322"
+
+	resources = {
+		oil = 5
+		aluminium = 3
+		rubber = 4
+	}
+
+	history = {
+		owner = CAM
+		victory_points = {
+			10831 2
+		}
+		victory_points = {
+			7978 5
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+			10831 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = CAM
+		add_core_of = NIG
+		set_variable = { productivity_state_var = 906 }
+	}
+
+	provinces = {
+		 7978 10831 11341
+	}
+	manpower = 4343714
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

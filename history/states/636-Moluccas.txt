@@ -1,0 +1,45 @@
+state = {
+	id = 636
+	name = "STATE_636"
+	manpower = 1654950
+	state_category = state_03
+
+	resources = {
+		steel = 2
+		rubber = 6
+	}
+
+	history = {
+		owner = IND
+		victory_points = { 1574 5 } #Ambon
+		victory_points = { 4579 1 } #Tual
+
+
+
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+			4579 = {
+				naval_base = 1
+
+			}
+			1574 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IND
+
+		set_variable = { productivity_state_var = 477 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_ambon }
+			province = { id = 1574 }
+		}
+	}
+
+	provinces = {
+		4579 10409 1574 7557 7369 14187 14188 14189
+
+		}
+}

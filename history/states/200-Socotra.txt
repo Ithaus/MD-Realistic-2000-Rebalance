@@ -1,0 +1,30 @@
+state = {
+	id = 200
+	name = "STATE_200"
+	manpower = 40229
+	state_category = state_00
+
+	history = {
+		owner = YEM
+		victory_points = { 8000 1 } #Hadibu
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			8000 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.45 }
+		add_core_of = YEM
+		set_variable = { productivity_state_var = 542 }
+		add_province_modifier = {
+			static_modifiers = { terrain_hadibu }
+			province = { id = 8000 }
+		}
+	}
+
+	provinces = {
+		8000
+	}
+}

@@ -1,0 +1,56 @@
+{
+  "_note": "Real 2000 commodity production by country. Sources: BP Statistical Review 2001 (oil), World Steel Association 2001 (steel), IAI/USGS Mineral Commodity Summaries (aluminium, tungsten, chromium), International Rubber Study Group (rubber). Units: oil=kbpd (thousand barrels/day), steel=Mt, aluminium=kt, tungsten=t (W content), rubber=kt, chromium=kt (chromite ore). MD tags used.",
+  "oil_kbpd": {
+    "SAU": 8400, "SOV": 6500, "USA": 5800, "PER": 3700, "MEX": 3300,
+    "CHI": 3200, "NOR": 3200, "VEN": 3000, "IRQ": 2600, "ENG": 2400,
+    "CAN": 2700, "UAE": 2400, "KUW": 2100, "NIG": 2000, "LBA": 1400,
+    "ALG": 1400, "IND": 1400, "BRA": 1300, "QAT": 850, "OMA": 960,
+    "AGL": 750, "ARG": 800, "COL": 700, "AST": 740, "SYR": 550,
+    "MAY": 700, "EGY": 800, "AZE": 280, "ECU": 400, "VIE": 330,
+    "YEM": 450, "TRI": 130, "GAB": 340, "CNG": 270, "BRU": 200,
+    "TUN": 80, "TRK": 130, "KAZ": 700, "DRC": 25, "EGU": 100,
+    "BAH": 40, "PHI": 0, "ROM": 130, "GER": 60, "ITA": 90,
+    "FRA": 30, "POL": 17, "JAP": 16, "BOL": 30, "CUB": 50,
+    "AUS": 18, "TAJ": 0, "UZB": 175, "TRK_2": 0, "PAK": 60
+  },
+  "steel_mt": {
+    "CHI": 129, "JAP": 106, "USA": 102, "SOV": 59, "GER": 46,
+    "KOR": 43, "UKR": 31, "BRA": 28, "RAJ": 27, "ITA": 27,
+    "FRA": 21, "TAI": 17, "CAN": 17, "MEX": 16, "SPR": 16,
+    "ENG": 15, "TUR": 14, "BEL": 12, "POL": 11, "PER": 7,
+    "SAF": 9, "AST": 7, "VEN": 4, "ARG": 4, "ROM": 5,
+    "CZE": 6, "AUS": 6, "HOL": 6, "SWE": 5, "FIN": 4,
+    "SLO": 4, "KAZ": 5, "EGY": 3, "HUN": 2, "VIE": 1,
+    "MAY": 4, "SIA": 3, "IND": 3, "ALG": 1, "LBA": 1,
+    "GRE": 1, "POR": 0.5, "PAK": 1, "HKG": 0
+  },
+  "aluminium_kt": {
+    "USA": 3668, "SOV": 3245, "CAN": 2373, "CHI": 2800, "AST": 1769,
+    "BRA": 1277, "NOR": 1026, "GER": 644, "VEN": 570, "SAF": 683,
+    "RAJ": 644, "BHR": 509, "UAE": 535, "FRA": 441, "MOZ": 252,
+    "ITA": 187, "NZL": 320, "HOL": 247, "SPR": 366, "KAZ": 130,
+    "ICE": 226, "TAJ": 269, "PER": 130, "TUR": 60, "EGY": 188,
+    "SWE": 100, "ARG": 263, "POL": 50, "ROM": 174, "JAP": 7,
+    "GRE": 156, "HUN": 35, "MNT": 110, "SLO": 130
+  },
+  "rubber_kt": {
+    "SIA": 2346, "IND": 1556, "MAY": 928, "RAJ": 631, "CHI": 445,
+    "VIE": 291, "CDI": 121, "NIG": 113, "LIB": 107, "SRI": 87,
+    "BRA": 91, "PHI": 73, "CAM": 59, "CBD": 35, "BRM": 36,
+    "DRC": 5, "GAH": 8, "GUA": 8, "ACE": 30
+  },
+  "tungsten_t": {
+    "CHI": 36500, "SOV": 3400, "AUS": 1500, "POR": 600, "BOL": 500,
+    "NKO": 400, "CAN": 400, "SIA": 300, "MON": 50, "PER": 50,
+    "BRM": 280, "VIE": 200, "RWA": 100, "AGL": 0, "BRA": 50,
+    "USA": 0, "JAP": 0, "FRA": 0, "GER": 0, "ENG": 0,
+    "AST_2": 0, "RAJ": 0, "MEX": 0, "ZIM": 0, "CHL": 0
+  },
+  "chromium_kt": {
+    "SAF": 6600, "KAZ": 2300, "RAJ": 1300, "TUR": 600, "FIN": 600,
+    "BRA": 450, "ZIM": 668, "ALB": 70, "IRN": 160, "SOV": 180,
+    "OMA": 12, "PAK": 13, "PHI": 50, "AGL": 0, "LIB": 0,
+    "SIE": 0, "GUI": 0, "SUD": 0, "ETH": 0, "MAD": 0,
+    "MOZ": 0, "BUR": 0, "CUB": 0, "VIE": 0, "GRE": 8
+  }
+}

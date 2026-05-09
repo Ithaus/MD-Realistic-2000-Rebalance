@@ -1,0 +1,39 @@
+state = {
+	id = 134
+	name = "STATE_134"
+
+	resources = {
+		aluminium = 11
+	}
+
+	history = {
+		owner = MNT
+		add_core_of = SER
+		add_core_of = MNT
+		victory_points = {
+			9809 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 1
+			9821 = {
+				naval_base = 1
+				naval_facility = 1
+			}
+		}
+		set_variable = { productivity_state_var = 522 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_podgorica }
+			province = { id = 9809 }
+		}
+	}
+
+	provinces = {
+		3922 6913 9809 9821 11858 14612
+	}
+	manpower = 604950
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

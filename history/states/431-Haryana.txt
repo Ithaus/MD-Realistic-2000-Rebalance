@@ -1,0 +1,47 @@
+state = {
+	id = 431
+	name = "STATE_431"
+	manpower = 43058550
+	state_category = state_16
+
+	resources = {
+		steel = 27
+		aluminium = 10
+	}
+	history = {
+		owner = RAJ
+		victory_points = { 2086 25 } #Delhi
+		victory_points = {
+			12868 5
+		}
+		victory_points = {
+			2032 1
+		}
+		victory_points = {
+			79 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 5
+			offices = 2
+			arms_factory = 2
+			air_base = 8
+			anti_air_building = 2
+			2086 = {
+				nuclear_facility = 1
+			}
+		}
+		add_core_of = RAJ
+		set_variable = { productivity_state_var = 890 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_delhi }
+			province = { id = 2086 }
+		}
+	}
+
+	provinces = {
+		2086 2032 12868 40 79
+	}
+}

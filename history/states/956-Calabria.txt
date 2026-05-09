@@ -1,0 +1,44 @@
+state = {
+	id = 956
+	name = "STATE_956"
+
+	resources = {
+		oil = 2
+	}
+
+	history = {
+		owner = ITA
+		add_core_of = ITA
+
+		victory_points = { 9990 1 }
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 2
+			agriculture_district = 1
+			9990 = {
+				naval_base = 5
+			}
+		}
+
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		set_variable = { hydroelectric_energy_production_var = 0.844 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 850 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_reggio_di_calabria }
+			province = { id = 9990 }
+		}
+	}
+
+	provinces = {
+		3958 6972 9856 9924 9990 10027 12098
+	}
+	manpower = 2307698
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

@@ -1,0 +1,56 @@
+state = {
+	id = 151
+	name = "STATE_151"
+	resources = {
+		oil = 5
+		steel = 4
+	}
+
+	history = {
+		owner = ROM
+		victory_points = {
+			3694 2
+		}
+		victory_points = {
+			690 2
+		}
+		victory_points = {
+			6679 1
+		}
+		victory_points = {
+			522 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = ROM
+		set_variable = { productivity_state_var = 547 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_sibiu }
+			province = { id = 6679 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_cluj_napoca }
+			province = { id = 3694 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_brasov }
+			province = { id = 690 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_targu_mures }
+			province = { id = 522 }
+		}
+	}
+
+	provinces = {
+		522 690 3665 3694 6679 6711 9640 11639 9619
+	}
+	manpower = 1910890
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

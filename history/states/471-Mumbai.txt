@@ -1,0 +1,44 @@
+state = {
+	id = 471
+	name = "STATE_471"
+	manpower = 21889235
+	state_category = state_12
+
+	history = {
+		owner = RAJ
+		victory_points = { 1349 5 } #Mumbai
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			dockyard = 1
+			arms_factory = 3
+			industrial_complex = 10
+			offices = 1
+			air_base = 6
+			anti_air_building = 2
+			1349 = {
+				naval_base = 10
+				# tata motors
+				land_facility = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		add_core_of = RAJ
+		set_variable = { productivity_state_var = 1095 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_mumbai }
+			province = { id = 1349 }
+		}
+	}
+
+	provinces = {
+		1349 7013
+	}
+}

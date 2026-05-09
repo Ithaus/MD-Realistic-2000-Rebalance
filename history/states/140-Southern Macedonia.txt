@@ -1,0 +1,39 @@
+state = {
+	id = 140
+	name = "STATE_140"
+	resources = {
+		aluminium = 2
+		chromium = 1
+	}
+
+	history = {
+		owner = GRE
+		victory_points = {
+			11818 3
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+			offices = 1
+			air_base = 2
+			11818 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = GRE
+		set_variable = { productivity_state_var = 798 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_thessaloniki }
+			province = { id = 11818 }
+		}
+	}
+
+	provinces = {
+		895 936 966 3844 9791 9837 9930 11818 472
+	}
+	manpower = 2320994
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

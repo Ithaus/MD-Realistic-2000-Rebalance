@@ -1,0 +1,41 @@
+state = {
+	id = 878
+	name = "STATE_878"
+	resources = {
+		aluminium = 6
+	}
+
+	history = {
+		owner = SUR
+		add_core_of = SUR
+		victory_points = {
+			10906 3
+		}
+		victory_points = {
+			12828 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 2
+			industrial_complex = 1
+			10906 = {
+				naval_base = 2
+			}
+		}
+
+		set_variable = { productivity_state_var = 899 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_paramaribo }
+			province = { id = 10906 }
+		}
+	}
+
+	provinces = {
+		10906 12828
+	}
+	manpower = 456938
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

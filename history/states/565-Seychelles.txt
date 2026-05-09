@@ -1,0 +1,31 @@
+state = {
+	id = 565
+	name = "STATE_565"
+	manpower = 81000
+	state_category = state_00
+
+	history = {
+		owner = SEY
+		add_core_of = SEY
+		victory_points = { 2188 2 } #Victoria
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			air_base = 2
+			2188 = {
+				naval_base = 2
+			}
+		}
+		set_variable = { productivity_state_var = 688 }
+		add_province_modifier = {
+			static_modifiers = { terrain_SEY_victoria }
+			province = { id = 2188 }
+		}
+	}
+
+	provinces = {
+		2188
+	}
+}

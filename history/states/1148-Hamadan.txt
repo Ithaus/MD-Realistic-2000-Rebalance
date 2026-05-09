@@ -1,0 +1,30 @@
+state = {
+	id = 1148
+	name = "STATE_1148"
+
+	history = {
+		owner = PER
+		victory_points = {
+			7215 5
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 1
+		}
+		add_core_of = PER
+		set_variable = { productivity_state_var = 500 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_hamadan }
+			province = { id = 7215 }
+		}
+	}
+
+	provinces = {
+		3988 7215 9816  12087
+	}
+	manpower = 1501441
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

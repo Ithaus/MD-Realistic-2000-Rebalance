@@ -1,0 +1,32 @@
+state = {
+	id = 480
+	name = "STATE_480"
+	manpower = 283346
+	state_category = state_00
+
+	history = {
+		owner = MLD
+		add_core_of = MLD
+		victory_points = { 4967 3 } #Malé
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 3
+			4967 = {
+				naval_base = 2
+			}
+			industrial_complex = 1
+		}
+		set_variable = { productivity_state_var = 670 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_male }
+			province = { id = 4967 }
+		}
+	}
+
+	provinces = {
+		4967
+	}
+}

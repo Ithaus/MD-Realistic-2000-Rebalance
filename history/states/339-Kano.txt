@@ -1,0 +1,38 @@
+state = {
+	id = 339
+	name = "STATE_339"
+
+	history = {
+		owner = NIG
+		victory_points = {
+			11267 10
+		}
+		victory_points = {
+			11263 5
+		}
+		victory_points = {
+			1969 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 2
+			industrial_complex = 2
+			offices = 1
+		}
+		add_core_of = NIG
+		set_variable = { productivity_state_var = 640 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kano }
+			province = { id = 11267 }
+		}
+	}
+
+	provinces = {
+		1969 4938 4972 11263 11267 13269 13321
+	}
+	manpower = 21950174
+	buildings_max_level_factor = 1.000
+	state_category = state_12
+}

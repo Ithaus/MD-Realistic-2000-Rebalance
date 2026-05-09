@@ -1,0 +1,47 @@
+state = {
+	id = 849
+	name = "STATE_849"
+
+	resources = {
+		steel = 11
+	}
+	history = {
+		owner = NIC
+		add_core_of = NIC
+		victory_points = {
+			12738 5
+		}
+		victory_points = {
+			10728 3
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+			air_base = 2
+			12738 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		set_variable = { geothermal_energy_production_var = 0.102 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		set_variable = { productivity_state_var = 725 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_managua }
+			province = { id = 12738 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_esteli }
+			province = { id = 10728 }
+		}
+	}
+
+	provinces = {
+		10728 12738 9800 13139 13178 14418 14419
+	}
+	manpower = 3931238
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

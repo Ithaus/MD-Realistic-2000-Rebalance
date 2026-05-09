@@ -1,0 +1,83 @@
+state = {
+	id = 399
+	name = "STATE_399"
+	resources = {
+		oil = 45
+	}
+
+	history = {
+		owner = PER
+		victory_points = {
+			9555 9
+		}
+		victory_points = {
+			2065 2
+		}
+		victory_points = {
+			9059 1
+		}
+		victory_points = {
+			7953 1
+		}
+		victory_points = {
+			9421 1
+		}
+		victory_points = {
+			5005 1
+		}
+		victory_points = {
+			6562 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 2
+			industrial_complex = 4
+			arms_factory = 1
+			offices = 1
+			anti_air_building = 2
+			7953 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = PER
+		add_core_of = ARA
+		set_variable = { productivity_state_var = 460 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_ahvaz }
+			province = { id = 9555 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_abadan }
+			province = { id = 9059 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_dezful }
+			province = { id = 2065 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_izeh }
+			province = { id = 6562 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_khorramshahr }
+			province = { id = 9421 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_bandar_e_mahshahr }
+			province = { id = 7953 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_behbahan }
+			province = { id = 5005 }
+		}
+	}
+
+	provinces = {
+		543 2065 5005 6562 7953 9059 9060 9421 9555 10774 14727
+	}
+	manpower = 4040039
+	buildings_max_level_factor = 1.000
+	state_category = state_05
+}

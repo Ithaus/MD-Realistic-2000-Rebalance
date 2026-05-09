@@ -1,0 +1,54 @@
+state = {
+	id = 745
+	name = "STATE_745"
+	resources = {
+		oil = 6
+		tungsten = 4
+		chromium = 12
+	}
+
+	history = {
+		owner = AST
+		add_core_of = AST
+		victory_points = { 12910 5 }
+		victory_points = { 8186 1 }
+		victory_points = { 1773 1 }
+		victory_points = { 2219 1 }
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			offices = 1
+			12910 = {
+				naval_base = 2
+				# GD Australia
+				land_facility = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		set_variable = { productivity_state_var = 820 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_adelaide }
+			province = { id = 12910 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_port_lincoln }
+			province = { id = 2219 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_whyalla }
+			province = { id = 8186 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_mount_gambier }
+			province = { id = 1773 }
+		}
+	}
+
+	provinces = {
+		1773 2205 2219 5138 5183 5197 5211 5225 7567 7623 8165 8186 8206 8220 10925 10927 12906 12910 12918 12924 13131 13169 13170 13171 13172
+	}
+	manpower = 1341089
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

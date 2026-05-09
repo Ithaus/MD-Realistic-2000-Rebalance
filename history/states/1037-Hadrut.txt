@@ -1,0 +1,32 @@
+state = {
+	id = 1037
+	name = "STATE_1037"
+
+	history = {
+		owner = NKR
+		add_core_of = NKR
+		add_core_of = ARM
+		add_core_of = AZE
+		victory_points = {
+			9715 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		set_variable = { productivity_state_var = 406 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_hadrut }
+			province = { id = 9715 }
+		}
+	}
+
+	provinces = {
+		9715
+	}
+
+	manpower = 17933
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

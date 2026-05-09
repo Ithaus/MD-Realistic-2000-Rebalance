@@ -1,0 +1,45 @@
+state = {
+	id = 514
+	name = "STATE_514"
+
+	resources = {
+		rubber = 3
+	}
+
+	history = {
+		owner = CBD
+		victory_points = {
+			7376 10
+		}
+		victory_points = {
+			12260 3
+		}
+		victory_points = {
+			4639 1
+		}
+		victory_points = {
+			7319 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = CBD
+		set_variable = { productivity_state_var = 568 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_phnom_penh }
+			province = { id = 7376 }
+		}
+	}
+
+	provinces = {
+		4639 7319 7376 12260 164
+	}
+	manpower = 6438425
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

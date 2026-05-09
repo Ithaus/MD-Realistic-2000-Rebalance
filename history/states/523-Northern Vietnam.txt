@@ -1,0 +1,45 @@
+state = {
+	id = 523
+	name = "STATE_523"
+	manpower = 6054427
+	state_category = state_06
+
+	resources = {
+		steel = 2
+		tungsten = 5
+	}
+
+	history = {
+		owner = VIE
+		victory_points = { 1157 5 } #Ha Long
+		victory_points = { 1073 5 } #Thai Nguyen
+		victory_points = { 9948 1 } #Lang Son
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 1
+
+			1157 = {
+				naval_base = 2
+			}
+
+		}
+		add_core_of = VIE
+		set_variable = { productivity_state_var = 609 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_lao_cai }
+			province = { id = 1073 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_ha_long }
+			province = { id = 1157 }
+		}
+	}
+
+	provinces = {
+		1157 7093 9948 7015 12065 7518 1073
+
+		}
+}

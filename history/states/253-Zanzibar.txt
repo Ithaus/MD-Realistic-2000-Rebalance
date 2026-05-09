@@ -1,0 +1,25 @@
+state = {
+	id = 253
+	name = "STATE_253"
+	manpower = 953676
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+
+	history = {
+		owner = TNZ
+		add_core_of = TNZ
+		add_core_of = ZAN
+		victory_points = { 13279 3 }
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+
+		}
+
+		set_variable = { productivity_state_var = 823 }
+	}
+
+	provinces = {
+		13279 13280
+	}
+}

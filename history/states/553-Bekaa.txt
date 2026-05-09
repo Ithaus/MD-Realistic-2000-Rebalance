@@ -1,0 +1,31 @@
+state = {
+	id = 553
+	name = "STATE_553"
+
+	history = {
+		owner = LEB
+		victory_points = {
+			6206 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			arms_factory = 1
+		}
+		add_core_of = LEB
+		add_core_of = HEZ
+		set_variable = { productivity_state_var = 562 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_baalbek }
+			province = { id = 6206 }
+		}
+	}
+
+	provinces = {
+		6206
+	}
+	manpower = 962275
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

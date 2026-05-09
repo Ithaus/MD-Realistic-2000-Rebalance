@@ -1,0 +1,33 @@
+state = {
+	id = 484
+	name = "STATE_484"
+
+	history = {
+		owner = BHU
+		add_core_of = BHU
+		victory_points = {
+			8010 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+			industrial_complex = 1
+		}
+
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.2 }
+		set_variable = { productivity_state_var = 426 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_thimphu }
+			province = { id = 8010 }
+		}
+	}
+
+	provinces = {
+		8010
+	}
+	manpower = 335460
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

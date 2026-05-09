@@ -1,0 +1,34 @@
+state = {
+	id = 398
+	name = "STATE_398"
+	manpower = 446920
+	state_category = state_01
+
+	history = {
+		owner = VER
+		add_core_of = VER
+		victory_points = { 13014 3 } #Praia
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+
+			13014 = {
+				naval_base = 1
+			}
+			industrial_complex = 1
+		}
+
+		set_variable = { productivity_state_var = 664 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_cape_verde }
+			province = { id = 13014 }
+		}
+	}
+
+	provinces = {
+		13014
+	}
+}

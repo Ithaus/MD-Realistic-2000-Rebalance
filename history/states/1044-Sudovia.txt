@@ -1,0 +1,33 @@
+
+state = {
+	id = 1044
+	name = "STATE_1044"
+	resources = {
+		aluminium = 6
+	}
+
+	history = {
+		owner = LIT
+		victory_points = {
+			6281 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+		}
+		add_core_of = LIT
+		set_variable = { productivity_state_var = 839 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_alytus }
+			province = { id = 6281 }
+		}
+	}
+
+	provinces = {
+		6281 6407 11312
+	}
+	manpower = 325372
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

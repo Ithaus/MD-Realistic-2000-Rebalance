@@ -1,0 +1,46 @@
+state = {
+	id = 181
+	name = "STATE_181"
+	resources = {
+		oil = 52
+		aluminium = 22
+		steel = 4
+	}
+
+	history = {
+		owner = QAT
+		add_core_of = QAT
+		victory_points = {
+			3738 9
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			offices = 1
+			air_base = 10
+			3738 = {
+				naval_base = 10
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+
+		set_variable = { productivity_state_var = 1168 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_doha }
+			province = { id = 3738 }
+		}
+	}
+
+	provinces = {
+		8051 3728 3738 6712
+	}
+	manpower = 637103
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

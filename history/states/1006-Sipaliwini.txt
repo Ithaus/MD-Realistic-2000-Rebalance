@@ -1,0 +1,23 @@
+state = {
+	id = 1006
+	name = "STATE_1006"
+
+	history = {
+		owner = SUR
+		add_core_of = SUR
+		victory_points = {
+			10912 3
+		}
+		buildings = {
+			infrastructure = 0
+		}
+		set_variable = { productivity_state_var = 469 }
+	}
+
+	provinces = {
+		1928 10912 12576
+	}
+	manpower = 25705
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

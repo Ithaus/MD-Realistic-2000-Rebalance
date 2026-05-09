@@ -1,0 +1,44 @@
+state = {
+	id = 451
+	name = "STATE_451"
+	manpower = 29199006
+	state_category = state_14
+
+	resources = {
+
+		aluminium = 9
+		
+		steel = 8
+	}
+
+	history = {
+		owner = RAJ
+		victory_points = {
+			1444 3
+		}
+		victory_points = {
+			12035 5
+		}
+		victory_points = {
+			12452 5
+		}
+		victory_points = {
+			7593 1
+		}
+		victory_points = {
+			7220 1
+		}
+		buildings = {
+			infrastructure = 0
+			arms_factory = 1
+			industrial_complex = 3
+			internet_station = 0
+		}
+		add_core_of = RAJ
+		set_variable = { productivity_state_var = 385 }
+	}
+
+	provinces = {
+		1444 1637 7220 7593 10358 10471 12035 12307 12452 9813 9881
+	}
+}

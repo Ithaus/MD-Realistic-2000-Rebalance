@@ -1,0 +1,51 @@
+state = {
+	id = 598
+	name = "STATE_598"
+
+	history = {
+		owner = TAI
+		victory_points = { 7186 10 } #Taipei
+		victory_points = { 14701 5 } #Keelung
+		victory_points = { 14699 3 } #Taoyuan
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 2
+			offices = 2
+			dockyard = 1
+			arms_factory = 2
+			air_base = 8
+			nuclear_reactor = 1
+			stronghold_network = 1 #Heng Shan underground base
+			microchip_plant = 3
+			14701 = {
+				naval_base = 10
+				land_facility = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = TAI
+		add_core_of = CHI
+		set_variable = { productivity_state_var = 719 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_taibei }
+			province = { id = 7186 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_keelung }
+			province = { id = 14701 }
+		}
+	}
+	manpower = 8540876
+	provinces = {
+		7186 14699 14701 14702
+	}
+	state_category = state_08
+}

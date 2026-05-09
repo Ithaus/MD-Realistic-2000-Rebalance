@@ -1,0 +1,69 @@
+state = {
+	id = 676
+	name = "STATE_676"
+	manpower = 4608854
+	state_category = state_05
+
+	resources = {
+		aluminium = 91
+	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			1821 10
+		}
+		victory_points = {
+			237 5
+		}
+		victory_points = {
+			1704 3
+		}
+		victory_points = {
+			307 3
+		}
+		victory_points = {
+			7320 3
+		}
+		victory_points = {
+			12567 3
+		}
+		victory_points = {
+			9553 3
+		}
+		victory_points = {
+			10133 1
+		}
+		victory_points = {
+			10314 1
+		}
+		victory_points = {
+			10189 1
+		}
+		victory_points = {
+			4813 1
+		}
+		victory_points = {
+			10648 1
+		}
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			air_base = 4
+			nuclear_reactor = 1
+		}
+
+		add_core_of = SOV
+		set_variable = { productivity_state_var = 570 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_yekaterinburg }
+			province = { id = 1821 }
+		}
+	}
+
+	provinces = {
+		237 307 361 1543 1704 1750 1771 1808 1821 1841 3280 4758 4813 7228 7320 7778 7824 9553 10133 10136 10189 10314 10648 10716 10720 11307 12102 12106 12567 12659 12696 14112
+	}
+}

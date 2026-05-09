@@ -1,0 +1,68 @@
+state = {
+	id = 447
+	name = "STATE_447"
+	manpower = 95340077
+	state_category = state_18
+
+	resources = {
+		steel = 13
+	}
+	history = {
+		owner = RAJ
+		victory_points = {
+			4571 4
+		}
+		victory_points = {
+			4544 1
+		}
+		victory_points = {
+			10361 1
+		}
+		victory_points = {
+			10878 1
+		}
+		victory_points = {
+			4459 1
+		}
+		victory_points = {
+			7537 4
+		}
+		victory_points = {
+			7475 1
+		}
+		victory_points = {
+			4516 5
+		}
+		victory_points = {
+			1541 1
+		}
+		victory_points = {
+			1569 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			arms_factory = 2
+			industrial_complex = 5
+			offices = 2
+			renewable_energy_infra = 1
+		}
+		add_core_of = RAJ
+		set_variable = { productivity_state_var = 325 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_patna }
+			province = { id = 4516 }
+		}
+
+		add_province_modifier = {
+			static_modifiers = { terrain_geraldton }
+			province = { id = 1541 }
+		}
+
+		}
+
+	provinces = {
+		1541 1569 1656 4459 4516 4544 4571 7475 7537 10361 10878 11265
+	}
+}

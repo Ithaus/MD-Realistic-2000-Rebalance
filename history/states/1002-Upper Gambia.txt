@@ -1,0 +1,25 @@
+state = {
+	id = 1002
+	name = "STATE_1002"
+
+	history = {
+		owner = GAM
+		add_core_of = GAM
+		victory_points = {
+			13305 2 #Farafenni
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+
+		set_variable = { productivity_state_var = 539 }
+	}
+
+	provinces = {
+		13305 13306
+	}
+	manpower = 417390
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

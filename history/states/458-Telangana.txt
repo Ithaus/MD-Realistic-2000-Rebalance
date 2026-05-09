@@ -1,0 +1,51 @@
+state = {
+	id = 458
+	name = "STATE_458"
+	manpower = 30521642
+	state_category = state_14
+
+	resources = {
+		steel = 1
+	}
+
+	history = {
+		owner = RAJ
+		victory_points = {
+			8087 5
+		}
+		victory_points = {
+			4472 5
+		}
+		victory_points = {
+			12226 5
+		}
+		victory_points = {
+			11950 1
+		}
+		victory_points = {
+			4280 1
+		}
+		victory_points = {
+			10511 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 6
+			agriculture_district = 3
+		}
+		add_core_of = RAJ
+		set_variable = { productivity_state_var = 815 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_hyderabad }
+			province = { id = 8087 }
+		}
+	}
+
+	provinces = {
+		1275 1317 4280 4472 5019 5104 7634 8087 10259 10324 10511 11950 12114 12226
+	}
+}

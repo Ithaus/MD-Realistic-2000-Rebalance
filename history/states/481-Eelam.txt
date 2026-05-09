@@ -1,0 +1,42 @@
+state = {
+	id = 481
+	name = "STATE_481"
+
+	history = {
+		owner = SRI
+		add_core_of = SRI
+		victory_points = {
+			10201 1
+		}
+		victory_points = {
+			10229 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 2
+			10201 = {
+				naval_base = 2
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
+		set_variable = { productivity_state_var = 535 }
+		add_province_modifier = {
+			static_modifiers = { terrain_jaffna }
+			province = { id = 10201 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kalmunai }
+			province = { id = 10229 }
+		}
+	}
+
+	provinces = {
+		7344 10201 10229 12258 6954
+	}
+	manpower = 3201454
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

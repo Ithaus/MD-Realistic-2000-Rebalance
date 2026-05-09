@@ -1,0 +1,88 @@
+state = {
+	id = 15
+	name = "STATE_15"
+	manpower = 7391254
+	state_category = state_07
+
+	resources = {
+		steel = 18
+	}
+
+	history = {
+		owner = ENG
+		victory_points = {
+			11446 2
+		}
+		victory_points = {
+			6489 1
+		}
+		victory_points = {
+			9458 1
+		}
+		victory_points = {
+			3422 1
+		}
+		victory_points = {
+			13070 1
+		}
+		victory_points = {
+			3501 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			dockyard = 1
+			industrial_complex = 1
+			offices = 2
+			air_base = 10
+			anti_air_building = 2
+			3501 = {
+				naval_base = 6
+			}
+			9458 = {
+				naval_base = 10
+				# BAE Naval
+				naval_facility = 1
+				naval_supply_hub = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = ENG
+		set_variable = { productivity_state_var = 1300 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_bournemouth }
+			province = { id = 3422 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_southampton }
+			province = { id = 6489 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_portsmouth }
+			province = { id = 9458 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_brighton }
+			province = { id = 11446 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_maidstone }
+			province = { id = 13070 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_gillingham }
+			province = { id = 3501 }
+		}
+	}
+
+	provinces = {
+		3422 3501 6351 6489 9458 9484 11446 13070
+	}
+}

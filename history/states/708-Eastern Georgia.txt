@@ -1,0 +1,30 @@
+state = {
+	id = 708
+	name = "STATE_708"
+
+	history = {
+		owner = GEO
+		victory_points = {
+			4534 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+		}
+		add_core_of = GEO
+		set_variable = { productivity_state_var = 421 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_telavi }
+			province = { id = 4534 }
+		}
+	}
+
+	provinces = {
+		303 1164 3667 4534 6763 7114
+	}
+	manpower = 435903
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

@@ -1,0 +1,37 @@
+state = {
+	id = 8
+	name = "STATE_8"
+	manpower = 19173
+	state_category = state_00
+
+	resources = {
+		oil = 11
+	}
+
+	history = {
+		owner = ENG
+		victory_points = { 6196 1 } #Lerwick
+
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			radar_station = 1
+			6196 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = SCO
+		add_core_of = ENG
+		set_variable = { productivity_state_var = 900 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_shetland }
+			province = { id = 6196 }
+		}
+	}
+
+	provinces = {
+		6196
+	}
+}

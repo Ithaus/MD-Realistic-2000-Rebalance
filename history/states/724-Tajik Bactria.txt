@@ -1,0 +1,48 @@
+state = {
+	id = 724
+	name = "STATE_724"
+	resources = {
+		aluminium = 27
+	}
+
+	history = {
+		owner = TAJ
+		victory_points = {
+			1384 5
+		}
+		victory_points = {
+			12218 3
+		}
+		victory_points = {
+			7224 3
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			agriculture_district = 1
+			air_base = 2
+			industrial_complex = 1
+		}
+		add_core_of = TAJ
+		set_variable = { productivity_state_var = 682 }
+		add_province_modifier = {
+			static_modifiers = { terrain_dushanbe }
+			province = { id = 1384 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_qurghonteppa }
+			province = { id = 12218 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kulop }
+			province = { id = 7224 }
+		}
+	}
+
+	provinces = {
+		1384 1713 4542 7224 12218 12250 12430 14131
+	}
+	manpower = 4275489
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

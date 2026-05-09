@@ -1,0 +1,31 @@
+state = {
+	id = 1036
+	name = "STATE_1036"
+
+	history = {
+		owner = NKR
+		add_core_of = NKR
+		add_core_of = ARM
+		add_core_of = AZE
+		victory_points = {
+			1467 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+		}
+		set_variable = { productivity_state_var = 406 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_karvachar }
+			province = { id = 1467 }
+		}
+	}
+
+	provinces = {
+		1467
+	}
+
+	manpower = 5267
+	state_category = state_00
+}

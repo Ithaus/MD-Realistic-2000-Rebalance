@@ -1,0 +1,31 @@
+state = {
+	id = 894
+	name = "STATE_894"
+	manpower = 686242
+	state_category = state_01
+
+	history = {
+		owner = URG
+		add_core_of = URG
+		victory_points = { 12468 3 } #Salto
+		victory_points = { 1641 1 } #Melo
+		victory_points = { 10502 1 } #Paysandú
+		victory_points = { 1626 1 } #Rivera
+		victory_points = { 12440 1 } #Artigas
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		set_variable = { hydroelectric_energy_production_var = 0.190 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 478 }
+	}
+
+	provinces = {
+		12440 12468 10502 1613 1654 12481 1641 1626
+	}
+}

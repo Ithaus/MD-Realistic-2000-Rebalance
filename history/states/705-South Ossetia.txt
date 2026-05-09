@@ -1,0 +1,34 @@
+state = {
+	id = 705
+	name = "STATE_705"
+
+	history = {
+		owner = SOO
+		add_core_of = SOO
+		add_core_of = GEO
+
+		victory_points = {
+			11609 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 1
+			industrial_complex = 1
+		}
+
+		set_variable = { productivity_state_var = 861 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_tskhinvali }
+			province = { id = 11609 }
+		}
+	}
+
+	provinces = {
+		1530 11609
+	}
+	manpower = 59211
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

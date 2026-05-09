@@ -1,0 +1,37 @@
+state = {
+	id = 1075
+	name = "STATE_1075"
+	manpower = 1653793
+	resources = {
+		oil = 9
+	}
+	history = {
+		owner = UKR
+		add_core_of = UKR
+
+		victory_points = { 9461 4 } #Luhansk
+		victory_points = { 6505 1 } #Alchevsk
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 2
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }
+		set_variable = { productivity_state_var = 510 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_alchevsk }
+			province = { id = 6505 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_luhansk }
+			province = { id = 9461 }
+		}
+	}
+	provinces = {
+		9446 9461 6505
+	}
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = state_03
+}

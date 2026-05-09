@@ -1,0 +1,49 @@
+state = {
+	id = 966
+	name = "STATE_966"
+	manpower = 7467629
+	state_category = state_07
+
+	resources = {
+		aluminium = 4
+		steel = 38
+	}
+
+	history = {
+		owner = GER
+		victory_points = {
+			587 8
+		}
+		victory_points = {
+			3547 2
+		}
+		victory_points = {
+			3444 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			arms_factory = 1
+			industrial_complex = 2
+			offices = 2
+			air_base = 3
+			anti_air_building = 1
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = GER
+		set_variable = { productivity_state_var = 1203 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_koln }
+			province = { id = 587 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_bonn }
+			province = { id = 3547 }
+		}
+	}
+
+	provinces = {
+		587 3444 3547
+	}
+}

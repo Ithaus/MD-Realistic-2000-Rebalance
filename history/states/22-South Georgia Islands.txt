@@ -1,0 +1,27 @@
+state = {
+	id = 22
+	name = "STATE_22" # South Georgia Islands
+	manpower = 87
+	state_category = state_inhospitable
+
+	history = {
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			10995 = {
+				naval_base = 1
+			}
+		}
+		set_variable = { productivity_state_var = 400 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_south_georgia_island }
+			province = { id = 10995 }
+		}
+	}
+
+	provinces = {
+		10995
+	}
+}

@@ -1,0 +1,26 @@
+# Backup files from patcher scripts
+*.bak
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Test/scratch
+test/
+tmp/
+*.log

@@ -1,0 +1,49 @@
+state = {
+	id = 352
+	name = "STATE_352"
+
+	resources = {
+		oil = 2
+		steel = 2
+		rubber = 33
+	}
+
+	history = {
+		owner = CDI
+		victory_points = {
+			10803 10
+		}
+		victory_points = {
+			9398 15
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			air_base = 2
+			10803 = {
+				naval_base = 4
+
+			}
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = CDI
+		set_variable = { productivity_state_var = 548 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_abidjan }
+			province = { id = 10803 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_yamoussoukro }
+			province = { id = 9398 }
+		}
+	}
+
+	provinces = {
+		10803 9327 9341 9357 9386 9398
+	}
+	manpower = 8875071
+	buildings_max_level_factor = 1.000
+	state_category = state_08
+}

@@ -1,0 +1,42 @@
+
+state = {
+	id = 90
+	name = "STATE_90"
+	resources = {
+		steel = 1
+	}
+
+	history = {
+		owner = SPR
+		victory_points = {
+			11825 2
+		}
+		victory_points = {
+			9700 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 1
+			agriculture_district = 1
+		}
+		add_core_of = SPR
+		set_variable = { productivity_state_var = 1019 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_valladolid }
+			province = { id = 11825 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_burgos }
+			province = { id = 9700 }
+		}
+	}
+
+	provinces = {
+		738 857 885 3794 3820 3859 6936 9700 9827 11684 11806 11825 11854 13926
+	}
+	manpower = 1246042
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

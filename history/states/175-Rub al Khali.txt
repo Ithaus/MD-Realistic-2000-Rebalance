@@ -1,0 +1,33 @@
+state = {
+	id = 175
+	name = "STATE_175"
+	resources = {
+		oil = 155
+	}
+
+	impassable = yes
+
+	history = {
+		owner = SAU
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = SAU
+		add_core_of = NEJ
+		add_core_of = QTF
+		set_variable = { productivity_state_var = 1173 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_SAU_al_khali }
+			province = { id = 8118 }
+		}
+	}
+
+	provinces = {
+		8118
+	}
+	manpower = 503
+	buildings_max_level_factor = 1.000
+	state_category = state_inhospitable
+}

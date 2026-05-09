@@ -1,0 +1,56 @@
+state = {
+	id = 658
+	name = "STATE_658"
+	resources = {
+		oil = 13
+		aluminium = 40
+	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			7375 5
+		}
+		victory_points = {
+			12527 3
+		}
+		victory_points = {
+			206 3
+		}
+		victory_points = {
+			12216 3
+		}
+		victory_points = {
+			11228 3
+		}
+		victory_points = {
+			9283 1
+		}
+		victory_points = {
+			1380 1
+		}
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			air_base = 2
+		}
+
+		add_core_of = SOV
+		set_variable = { hydroelectric_energy_production_var = 0.868 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 570 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_perm }
+			province = { id = 7375 }
+		}
+	}
+
+	provinces = {
+		123 189 206 278 390 1365 1380 1754 3000 4326 4372 4802 4874 6025 7375 9283 10216 10286 11111 11195 11228 11352 12175 12187 12203 12216 12527
+	}
+	manpower = 2809871
+	state_category = state_05
+}

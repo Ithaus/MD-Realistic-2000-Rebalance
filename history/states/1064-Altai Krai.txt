@@ -1,0 +1,34 @@
+state = {
+	id = 1064
+	name = "STATE_1064"
+	manpower = 2519315
+	state_category = state_03
+
+	resources = {
+		tungsten = 8
+	}
+
+	history = {
+		owner = SOV
+
+		victory_points = { 1297 5 } #Barnaul
+		victory_points = { 4803 3 } #Biysk
+		victory_points = { 11410 3 } #Rubtsovsk
+		victory_points = { 1797 1 } #Slavgorod
+		victory_points = { 1794 1 } #Aleysk
+		victory_points = { 7680 1 } #Zmeinogorsk
+
+		buildings = {
+			infrastructure = 2
+			internet_station = 0
+			air_base = 2
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
+		add_core_of = SOV
+		set_variable = { productivity_state_var = 570 }
+	}
+
+	provinces = {
+		1297 1779 1794 1797 4803 7680 10537 10546 11410 12515 12528 12613 14925 14926
+	}
+}

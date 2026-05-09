@@ -1,0 +1,31 @@
+state = {
+	id = 288
+	name = "STATE_288"
+
+	resources = {
+		tungsten = 3
+		chromium = 13
+	}
+
+	history = {
+		owner = BOT
+
+		victory_points = {
+			1580 1
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+
+		}
+		add_core_of = BOT
+		set_variable = { productivity_state_var = 439 }
+	}
+
+	provinces = {
+		12940 12963 11706 11736 358 550 1580 470
+	}
+	manpower = 234882
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

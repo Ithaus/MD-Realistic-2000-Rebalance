@@ -1,0 +1,81 @@
+state = {
+	id = 402
+	name = "STATE_402"
+	resources = {
+		oil = 2
+		aluminium = 6
+		tungsten = 1
+		steel = 27
+	}
+
+	history = {
+		owner = PER
+		victory_points = {
+			4599 22
+		}
+		victory_points = {
+			557 2
+		}
+		victory_points = {
+			14678 1
+		}
+		victory_points = {
+			14677 1
+		}
+		victory_points = {
+			14675 1
+		}
+		victory_points = {
+			1521 1
+		}
+		victory_points = {
+			10806 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 3
+			offices = 2
+			air_base = 4
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = PER
+		set_variable = { productivity_state_var = 450 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_mashhad }
+			province = { id = 4599 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_sabzevar }
+			province = { id = 14678 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_quchan }
+			province = { id = 1521 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_neyshabur }
+			province = { id = 557 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_kashmar }
+			province = { id = 14675 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_torbat_e_heydariyeh }
+			province = { id = 14677 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_torbat_e_jam }
+			province = { id = 10806 }
+		}
+	}
+
+	provinces = {
+		557 1521 1888 1957 2000 4599 5029 10806 14675 14676 14677 14678 14680
+	}
+	manpower = 5509844
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

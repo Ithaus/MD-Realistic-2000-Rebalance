@@ -1,0 +1,39 @@
+state = {
+	id = 274
+	name = "STATE_274"
+
+	resources = {
+		steel = 12
+		aluminium = 23
+		tungsten = 4
+		chromium = 177
+	}
+
+	history = {
+		owner = SAF
+		victory_points = {
+			1537 5
+		}
+		victory_points = {
+			1611 1
+		}
+		victory_points = {
+			1431 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = SAF
+		set_variable = { productivity_state_var = 591 }
+	}
+
+	provinces = {
+		2171 1431 1537 1611
+	}
+	manpower = 3562939
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

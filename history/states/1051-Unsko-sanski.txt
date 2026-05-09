@@ -1,0 +1,30 @@
+
+state = {
+	id = 1051
+	name = "STATE_1051"
+
+	history = {
+		owner = BOS
+		victory_points = {
+			6614 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+		}
+		add_core_of = BOS
+		set_variable = { productivity_state_var = 542 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_bihac }
+			province = { id = 6614 }
+		}
+	}
+
+	provinces = {
+		6614 9586
+	}
+	manpower = 334048
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

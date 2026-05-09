@@ -1,0 +1,29 @@
+state = {
+	id = 566
+	name = "STATE_566"
+
+	history = {
+		owner = SYR
+		victory_points = {
+			12473 16
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+		}
+		add_core_of = SYR
+		set_variable = { productivity_state_var = 812 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_aleppo_citadel_syria }
+			province = { id = 12473 }
+		}
+	}
+
+	provinces = {
+		3053 6308 6353 12473 14598
+	}
+	manpower = 2723589
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

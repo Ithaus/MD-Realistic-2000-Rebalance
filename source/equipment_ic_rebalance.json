@@ -1,0 +1,153 @@
+{
+  "_doc": "MD equipment IC rebalance map. Maps old build_cost_ic to new based on real 2000 production rates. Format: equipment_name_pattern -> {old_range, new_value, real_2000_rate, justification}",
+  "_assumption": "1 mil_factory produces 1800 IC/year. Target: realistic war production = 1.8 × peacetime real rate.",
+
+  "land_equipment": {
+    "infantry_weapons_1": {"old": 0.25, "new": 0.25, "rate": "5800/y", "note": "OK - represents squad equipment ~30 rifles"},
+    "infantry_weapons_2": {"old": 0.30, "new": 0.30, "rate": "6000/y", "note": "OK"},
+    "infantry_weapons_3": {"old": 0.35, "new": 0.35, "rate": "5143/y", "note": "OK"},
+    "infantry_weapons_4": {"old": 0.40, "new": 0.40, "note": "OK"},
+    "infantry_weapons_5": {"old": 0.45, "new": 0.45, "note": "OK"},
+    "infantry_weapons_6": {"old": 0.50, "new": 0.50, "note": "OK - HK416 squad"},
+    "infantry_weapons_7": {"old": 0.55, "new": 0.55, "note": "OK"},
+    "infantry_weapons_8": {"old": 0.60, "new": 0.60, "note": "OK"},
+    "infantry_weapons_9": {"old": 0.65, "new": 0.65, "note": "OK"},
+    "infantry_weapons_10": {"old": 0.70, "new": 0.70, "note": "OK"},
+    "infantry_weapons_11": {"old": 0.75, "new": 0.75, "note": "OK"},
+    "infantry_weapons_12": {"old": 0.80, "new": 0.80, "note": "OK"}
+  },
+
+  "tank_chassis": {
+    "_note": "MBT full = chassis (4-7) + modules (~22). Adjusting modules separately. Chassis stays.",
+    "medium_tank_chassis_1": {"old": 4.5, "new": 4.5, "note": "OK base"},
+    "medium_tank_chassis_2": {"old": 5.0, "new": 5.5, "note": "+10%"},
+    "medium_tank_chassis_3": {"old": 5.5, "new": 6.5, "note": "+18%"},
+    "medium_tank_chassis_4": {"old": 6.0, "new": 7.5, "note": "+25%"},
+    "medium_tank_chassis_5": {"old": 6.5, "new": 8.5, "note": "+31%"},
+    "medium_tank_chassis_6": {"old": 7.0, "new": 9.5, "note": "+36% modern MBT chassis"}
+  },
+
+  "anti_tank": {
+    "_note": "ATGMs were 2.5x too expensive vs real Lockheed/Raytheon production rates. Reducing significantly.",
+    "anti_tank_basic": {"old_range": "0.6-1.0", "new_range": "0.4-0.7", "rate": "3000-4500/y", "note": "Light AT (RPG-7, AT-4)"},
+    "anti_tank_modern_1": {"old": 4.5, "new": 1.8, "rate": "1000/y", "note": "TOW-2, Kornet base"},
+    "anti_tank_modern_2": {"old": 5.0, "new": 2.0, "rate": "900/y"},
+    "anti_tank_modern_3": {"old": 5.5, "new": 2.2, "rate": "818/y"},
+    "anti_tank_modern_4": {"old": 6.0, "new": 2.4, "rate": "750/y", "note": "Javelin tier"},
+    "anti_tank_modern_5": {"old": 6.5, "new": 2.6, "rate": "692/y", "note": "Top-tier ATGM, Spike-LR"}
+  },
+
+  "anti_air": {
+    "_note": "MANPADs and Patriot are well-balanced. Just bump heavy SAM tier.",
+    "manpad_basic": {"old": 0.9, "new": 1.0, "rate": "1800/y", "note": "Stinger, Igla"},
+    "manpad_modern": {"old_range": "1.2-3.0", "new_range": "1.2-3.0", "note": "OK"},
+    "mobile_sam_short": {"old_range": "3.2-4.7", "new_range": "3.5-5.0", "note": "Slight increase for crew-served SAM"},
+    "mobile_sam_long": {"old_range": "5.4-6.2", "new_range": "6.0-7.5", "note": "Patriot, S-300 base"}
+  },
+
+  "artillery": {
+    "_note": "MAJOR FIX: towed and SP arty were 3-5x too cheap. Real Watervliet/KMW production was 30-100/y per plant.",
+    "towed_arty_1": {"old": 3.5, "new": 14, "rate": "129/y", "note": "M198, D-30 - was 5x too cheap"},
+    "towed_arty_2": {"old": 3.75, "new": 16, "rate": "113/y"},
+    "towed_arty_3": {"old": 4.90, "new": 20, "rate": "90/y", "note": "Top towed"},
+    "sp_arty_1": {"old": 6.86, "new": 25, "rate": "72/y", "note": "Light SP gun"},
+    "sp_arty_2": {"old": 9.60, "new": 32, "rate": "56/y"},
+    "sp_arty_3": {"old": 12.49, "new": 40, "rate": "45/y", "note": "PzH 2000, M109A6 modern - real 30-50/y"},
+    "mlrs": {"old": 15.4, "new": 22, "rate": "82/y", "note": "HIMARS, Smerch - real ~80/y"},
+    "heavy_sam_system": {"old": 186.89, "new": 160, "rate": "11/y", "note": "S-300 battalion - real 10-15/y"}
+  },
+
+  "plane_airframes": {
+    "_note": "MAJOR FIX: light fighters were 2x too expensive. Heavy bombers were too cheap. Stealth was too cheap.",
+    "small_plane_airframe": {"old": 8, "new": 4, "note": "1st gen - cheaper"},
+    "small_plane_airframe_1": {"old": 12.5, "new": 7, "rate": "257/y", "note": "F-16 base - real 80/y per plant"},
+    "small_plane_airframe_2": {"old": 13.75, "new": 8, "rate": "225/y"},
+    "small_plane_airframe_3": {"old": 15, "new": 9, "rate": "200/y"},
+    "small_plane_airframe_4": {"old": 16.5, "new": 10, "rate": "180/y", "note": "Modern F-16C/MiG-29 chassis"},
+    "small_plane_airframe_5": {"old": 18.0, "new": 11, "rate": "164/y"},
+    "small_plane_airframe_6": {"old": 19.5, "new": 12, "rate": "150/y", "note": "Top light fighter chassis"},
+
+    "cv_small_plane_airframe": {"old": 8, "new": 5, "note": "Carrier light fighter base"},
+    "cv_small_plane_airframe_1": {"old": 13.5, "new": 8, "rate": "225/y"},
+    "cv_small_plane_airframe_2": {"old": 14.5, "new": 9, "rate": "200/y"},
+    "cv_small_plane_airframe_3": {"old": 16, "new": 10, "rate": "180/y"},
+    "cv_small_plane_airframe_4": {"old": 17.5, "new": 11, "rate": "164/y"},
+    "cv_small_plane_airframe_5": {"old": 19.0, "new": 12, "rate": "150/y"},
+    "cv_small_plane_airframe_6": {"old": 20.5, "new": 13, "rate": "138/y"},
+
+    "medium_plane_airframe": {"old": 9, "new": 7, "note": "Medium plane base"},
+    "medium_plane_airframe_1": {"old": 27, "new": 18, "rate": "100/y", "note": "F/A-18C base - real 52/y"},
+    "medium_plane_airframe_2": {"old": 30, "new": 20, "rate": "90/y"},
+    "medium_plane_airframe_3": {"old": 33, "new": 22, "rate": "82/y"},
+    "medium_plane_airframe_4": {"old": 36, "new": 24, "rate": "75/y", "note": "Su-30, F-15E modern"},
+    "medium_plane_airframe_5": {"old": 40, "new": 27, "rate": "67/y"},
+    "medium_plane_airframe_6": {"old": 44, "new": 30, "rate": "60/y", "note": "Top multirole gen 4+"},
+
+    "cv_medium_plane_airframe": {"old": 9, "new": 7},
+    "cv_medium_plane_airframe_1": {"old": 28, "new": 19, "rate": "95/y"},
+    "cv_medium_plane_airframe_2": {"old": 32, "new": 22, "rate": "82/y"},
+    "cv_medium_plane_airframe_3": {"old": 35, "new": 24, "rate": "75/y"},
+    "cv_medium_plane_airframe_4": {"old": 38.5, "new": 26, "rate": "69/y"},
+    "cv_medium_plane_airframe_5": {"old": 42.0, "new": 28, "rate": "64/y"},
+    "cv_medium_plane_airframe_6": {"old": 45.5, "new": 31, "rate": "58/y"},
+
+    "large_plane_airframe": {"old": 19, "new": 35, "note": "Large plane base bumped"},
+    "large_plane_airframe_1": {"old": 45, "new": 80, "rate": "22/y", "note": "B-52 era bomber chassis"},
+    "large_plane_airframe_2": {"old": 48, "new": 100, "rate": "18/y", "note": "B-1B class"},
+    "large_plane_airframe_3": {"old": 53, "new": 130, "rate": "14/y"},
+    "large_plane_airframe_4": {"old": 58, "new": 160, "rate": "11/y", "note": "B-2 class stealth bomber"},
+    "large_plane_airframe_5": {"old": 63, "new": 200, "rate": "9/y"},
+    "large_plane_airframe_6": {"old": 68, "new": 250, "rate": "7/y", "note": "Top stealth bomber - real B-2 production was 0/y by 2000 (line closed)"},
+
+    "mothership_equipment": {"old": 500, "new": 800, "note": "Strategic carrier aircraft - very rare"}
+  },
+
+  "ships": {
+    "_note": "MAJOR FIX: carriers were 2x too slow to build. SSBN too fast. Reflects real shipyard times 2000.",
+    "@corvette_build_cost": {"old": 2100, "new": 2100, "time": "1.2y", "note": "OK - matches real Visby/Type 056"},
+    "@frigate_build_cost": {"old": 5600, "new": 5400, "time": "3y", "note": "Slight reduction - real Type 23/Sachsen 2.5-3y"},
+    "@destroyer_build_cost": {"old": 8400, "new": 7200, "time": "4y", "note": "Match Burke-class real time"},
+    "@cruiser_build_cost": {"old": 15400, "new": 14000, "time": "7.8y", "note": "No new builds 2000, legacy class"},
+    "@helicopter_operator_build_cost": {"old": 28000, "new": 8000, "time": "4.4y", "note": "MAJOR FIX - LHA Wasp class real 4-5y, was 3x too slow"},
+    "@battlecruiser_build_cost": {"old": 28000, "new": 20000, "note": "Legacy"},
+    "@battleship_build_cost": {"old": 43750, "new": 43750, "note": "No production 2000"},
+    "@carrier_build_cost": {"old": 28000, "new": 12000, "time": "6.7y", "note": "MAJOR FIX - Nimitz CVN real 6-7y, was 2x too slow"},
+    "@attack_sub_build_cost": {"old": 3150, "new": 3150, "time": "1.75y", "note": "OK - Virginia class real 1.5-2y"},
+    "@missile_sub_build_cost": {"old": 5250, "new": 8000, "time": "4.4y", "note": "FIX - Borey/Ohio SSBN real 4-5y, was too fast"}
+  },
+
+  "plane_modules_engines": {
+    "_note": "Engine costs scaled with airframe rebalance",
+    "engine_basic": {"old": 35, "new": 25, "note": "1st gen turbojet"},
+    "engine_modern_1": {"old": 43, "new": 30, "note": "F100/F110 era"},
+    "engine_modern_2": {"old": 51, "new": 36, "note": "Gen 4 F-16/F-15"},
+    "engine_modern_3": {"old": 59, "new": 42, "note": "Gen 4+"},
+    "engine_modern_4": {"old": 67, "new": 48, "note": "Gen 5 stealth engine"},
+    "engine_top": {"old": 107, "new": 130, "note": "F119/F135 thrust vectoring"}
+  },
+
+  "tank_modules": {
+    "_note": "Module costs slightly bumped to total ~30 for modern MBT (target 50/y per factory)",
+    "cannon_basic": {"old": 1.95, "new": 2.5},
+    "cannon_modern": {"old": 4.485, "new": 5.5},
+    "cannon_top": {"old": 5.655, "new": 7.0},
+    "armor_basic": {"old": 2.44, "new": 3.0},
+    "armor_modern": {"old": 3.9, "new": 5.0},
+    "armor_top": {"old": 4.875, "new": 6.5, "note": "Modern composite ERA armor"},
+    "engine_basic": {"old": 3.11, "new": 4.0},
+    "engine_modern": {"old": 4.89, "new": 6.0}
+  },
+
+  "summary": {
+    "total_changes": "~80 individual IC adjustments across 7 equipment files",
+    "files_to_edit": [
+      "common/units/equipment/MD_artillery.txt (HUGE bump for artillery)",
+      "common/units/equipment/MD_anti_tank.txt (REDUCE ATGM costs)",
+      "common/units/equipment/MD_plane_airframes.txt (light fighters cheaper, bombers more expensive)",
+      "common/units/equipment/MD_tank_chassis.txt (slight bump modern MBT)",
+      "common/units/equipment/MD_mtg_ships.txt (FIX carriers/SSBN times)",
+      "common/units/equipment/modules/MD_plane_modules.txt (engine cost adjustments)",
+      "common/units/equipment/modules/MD_tank_modules.txt (module bumps)"
+    ]
+  }
+}

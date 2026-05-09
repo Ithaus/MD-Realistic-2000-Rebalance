@@ -1,0 +1,50 @@
+state = {
+	id = 356
+	name = "STATE_356"
+
+	resources = {
+		chromium = 7
+	}
+
+	history = {
+		owner = LUR
+		add_core_of = LIB
+		add_core_of = LUR
+		victory_points = {
+			7959 10
+		}
+		victory_points = {
+			13241 5
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+			air_base = 1
+			7959 = {
+				naval_base = 1
+			}
+		}
+		LIB = {
+			set_province_controller = 13240
+			set_province_controller = 7959
+			set_province_controller = 13239
+		}
+		set_variable = { productivity_state_var = 471 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_monrovia }
+			province = { id = 7959 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_zorzor }
+			province = { id = 13241 }
+		}
+	}
+
+	provinces = {
+		7959 13239 13240 13241
+	}
+	manpower = 2924334
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

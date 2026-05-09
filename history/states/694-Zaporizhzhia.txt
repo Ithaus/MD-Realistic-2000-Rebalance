@@ -1,0 +1,58 @@
+state = {
+	id = 694
+	name = "STATE_694"
+	resources = {
+		aluminium = 2
+		steel = 18
+		rubber = 2
+	}
+
+	history = {
+		owner = UKR
+		victory_points = {
+			11405 6
+		}
+		victory_points = {
+			9729 3
+		}
+		victory_points = {
+			9571 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+			air_base = 3
+			nuclear_reactor = 1
+			11405 = {
+				air_facility = 1
+			}
+		}
+		add_core_of = UKR
+		set_variable = { hydroelectric_energy_production_var = 0.372 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 510 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_zaporizhzhia }
+			province = { id = 11405 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_melitopol }
+			province = { id = 9729 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_berdyansk }
+			province = { id = 9571 }
+		}
+	}
+
+	provinces = {
+		3399 9571 9729 11405 11700 14329 14439 14440 14441
+	}
+	manpower = 1881958
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}

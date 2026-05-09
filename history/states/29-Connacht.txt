@@ -1,0 +1,31 @@
+state = {
+	id = 29
+	name = "STATE_29"
+
+	history = {
+		owner = IRE
+		victory_points = {
+			9303 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			industrial_complex = 1
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = IRE
+		set_variable = { productivity_state_var = 936 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_galway }
+			province = { id = 9303 }
+		}
+	}
+
+	provinces = {
+		337 3396 9255 9303 9321 9369 11371 13936 13944
+	}
+	manpower = 575623
+	buildings_max_level_factor = 1.000
+	state_category = state_01
+}

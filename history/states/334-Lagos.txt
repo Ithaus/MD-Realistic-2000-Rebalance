@@ -1,0 +1,60 @@
+state = {
+	id = 334
+	name = "STATE_334"
+
+	resources = {
+		oil = 53
+		steel = 13
+		rubber = 19
+	}
+
+	history = {
+		owner = NIG
+		victory_points = {
+			2050 20
+		}
+		victory_points = {
+			12731 8
+		}
+		victory_points = {
+			4952 7
+		}
+		victory_points = {
+			12900 3
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			offices = 1
+			industrial_complex = 3
+			air_base = 6
+			agriculture_district = 1
+			2050 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		set_variable = { hydroelectric_energy_production_var = 0.651 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		add_core_of = NIG
+		set_variable = { productivity_state_var = 640 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_lagos }
+			province = { id = 2050 }
+		}
+	}
+
+	provinces = {
+		2050 4952 10420 11096 11216 11227 11236 12731 12900 13311 13312 13313 13314 13315 14117 14118
+	}
+	manpower = 39505694
+	buildings_max_level_factor = 1.000
+	state_category = state_15
+}

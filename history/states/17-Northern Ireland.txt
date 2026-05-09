@@ -1,0 +1,39 @@
+state = {
+	id = 17
+	name = "STATE_17"
+	manpower = 1591259
+	state_category = state_03
+
+	resources = {
+		steel = 18
+	}
+
+	history = {
+		owner = ENG
+		victory_points = { 3379 2 } #Belfast
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 2
+			offices = 1
+			arms_factory = 1
+			3379 = {
+				naval_base = 4
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
+		add_core_of = ENG
+		add_core_of = IRE
+		add_core_of = NIR
+		set_variable = { productivity_state_var = 940 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_belfast }
+			province = { id = 3379 }
+		}
+	}
+
+	provinces = {
+		276 385 3217 3329 3379 11257 14492 14493
+	}
+}

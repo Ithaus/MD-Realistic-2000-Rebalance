@@ -1,0 +1,45 @@
+state = {
+	id = 408
+	name = "STATE_408"
+
+	history = {
+		owner = PER
+		add_core_of = PER
+		add_core_of = IKR
+		victory_points = {
+			16216 3
+		}
+		victory_points = {
+			4943 1
+		}
+		victory_points = {
+			14313 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 0
+			arms_factory = 1
+		}
+		set_variable = { productivity_state_var = 480 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_sanandaj }
+			province = { id = 16216 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_saqqez }
+			province = { id = 4943 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_marivan }
+			province = { id = 14313 }
+		}
+	}
+
+	provinces = {
+		4943 5098 14313 14730 16216
+	}
+	manpower = 1380026
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

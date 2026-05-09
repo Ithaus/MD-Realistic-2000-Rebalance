@@ -1,0 +1,24 @@
+state = {
+	id = 931
+	name = "STATE_931"
+
+	history = {
+		owner = WAA
+		add_core_of = WAA
+		add_core_of = SHN
+		add_core_of = BRM
+		add_core_of = NHN
+		buildings = {
+			infrastructure = 0
+		}
+
+		set_variable = { productivity_state_var = 363 }
+	}
+
+	provinces = {
+		13242
+	}
+	manpower = 100000
+	buildings_max_level_factor = 1.000
+	state_category = state_02
+}

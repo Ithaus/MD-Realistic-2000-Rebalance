@@ -1,0 +1,71 @@
+state = {
+	id = 606
+	name = "STATE_606"
+
+	resources = {
+		steel = 31
+	}
+
+	history = {
+		owner = KOR
+		victory_points = {
+			7204 11
+		}
+		victory_points = {
+			11992 2
+		}
+		victory_points = {
+			9936 1
+		}
+		victory_points = {
+			14456 1
+		}
+		victory_points = {
+			3278 1
+		}
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			industrial_complex = 4
+			arms_factory = 2
+			offices = 3
+			fuel_silo = 2
+			agriculture_district = 1
+			microchip_plant = 3
+			7204 = {
+				nuclear_facility = 1
+			}
+		}
+		add_core_of = NKO
+		add_core_of = KOR
+		set_variable = { productivity_state_var = 900 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_daejeon }
+			province = { id = 7204 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_cheonan }
+			province = { id = 7204 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_cheongju }
+			province = { id = 3278 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_jecheon }
+			province = { id = 9936 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_seosan }
+			province = { id = 11992 }
+		}
+	}
+
+	provinces = {
+		3278 7175 7204 9936 11977 11992 14456
+	}
+	manpower = 5283613
+	buildings_max_level_factor = 1.000
+	state_category = state_06
+}

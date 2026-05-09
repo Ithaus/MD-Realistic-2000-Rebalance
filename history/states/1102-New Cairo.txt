@@ -1,0 +1,28 @@
+state = {
+	id = 1102
+	name = "STATE_1102"
+
+	history = {
+		owner = EGY
+		add_core_of = EGY
+		victory_points = {
+			14515 22
+		}
+		buildings = {
+			offices = 1
+		}
+		set_variable = { productivity_state_var = 535 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_new_cairo }
+			province = { id = 14515 }
+		}
+	}
+
+	provinces = {
+		14515
+	}
+	manpower = 217830
+	buildings_max_level_factor = 1.000
+	state_category = state_00
+}

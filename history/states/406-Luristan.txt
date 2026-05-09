@@ -1,0 +1,56 @@
+state = {
+	id = 406
+	name = "STATE_406"
+	resources = {
+		oil = 55
+	}
+
+	history = {
+		owner = PER
+		victory_points = {
+			15483 3
+		}
+		victory_points = {
+			9074 1
+		}
+		victory_points = {
+			1922 1
+		}
+		victory_points = {
+			3908 1
+		}
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			air_base = 4
+			industrial_complex = 3
+		}
+		add_core_of = PER
+		add_core_of = LOR
+		set_variable = { productivity_state_var = 430 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_khorramabad }
+			province = { id = 15483 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_borujerd }
+			province = { id = 9074 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_shahr_e_kord }
+			province = { id = 1922 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_yasuj }
+			province = { id = 3908 }
+		}
+	}
+
+	provinces = {
+		1922 3908 5050 9074 14735 14736 14737 14738 15480 15483 16154
+	}
+	manpower = 2979797
+	buildings_max_level_factor = 1.000
+	state_category = state_04
+}

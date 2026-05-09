@@ -1,0 +1,28 @@
+state = {
+	id = 1076
+	name = "STATE_1076"
+	manpower = 731411
+	history = {
+		owner = UKR
+		add_core_of = UKR
+		victory_points = { 6519 1 }
+		buildings = {
+			infrastructure = 3
+			internet_station = 2
+			air_base = 2
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.20 }
+		set_variable = { productivity_state_var = 510 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_severodonetsk }
+			province = { id = 6519 }
+		}
+	}
+	provinces = {
+		547 570 6519 9476 11487 11513
+	}
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+	state_category = state_01
+}

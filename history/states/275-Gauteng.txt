@@ -1,0 +1,50 @@
+state = {
+	id = 275
+	name = "STATE_275"
+
+	resources = {
+		aluminium = 23
+		tungsten = 2
+		steel = 7
+		chromium = 76
+	}
+
+	history = {
+		owner = SAF
+		victory_points = {
+			10400 10
+		}
+		victory_points = {
+			1668 11
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 2
+			air_base = 8
+			arms_factory = 2
+			industrial_complex = 3
+			offices = 2
+			1668 = {
+				land_facility = 1
+			}
+		}
+		add_core_of = SAF
+		set_variable = { productivity_state_var = 591 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_johannesburg }
+			province = { id = 10400 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_pretoria }
+			province = { id = 1668 }
+		}
+	}
+
+	provinces = {
+		10400 1668
+	}
+	manpower = 11825314
+	buildings_max_level_factor = 1.000
+	state_category = state_09
+}

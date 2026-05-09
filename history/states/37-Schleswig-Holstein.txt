@@ -1,0 +1,53 @@
+state = {
+	id = 37
+	name = "STATE_37"
+	manpower = 2897683
+	state_category = state_04
+
+	resources = {
+		aluminium = 16
+		steel = 22
+	}
+
+	history = {
+		owner = GER
+		victory_points = { 6389 1 } #Kiel
+		victory_points = { 11331 1 } #Lübeck
+		buildings = {
+			infrastructure = 2
+			agriculture_district = 1
+			internet_station = 2
+			industrial_complex = 1
+			anti_air_building = 1
+			offices = 1
+			dockyard = 1
+			air_base = 4
+			nuclear_reactor = 2
+			6389 = {
+				naval_base = 8
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+		}
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
+		add_core_of = GER
+		set_variable = { productivity_state_var = 1089 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_kiel }
+			province = { id = 6389 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_lubeck }
+			province = { id = 11331 }
+		}
+	}
+
+	provinces = {
+		317 3231 6257 6389 9320 11331 11366 14544
+	 }
+}

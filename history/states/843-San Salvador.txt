@@ -1,0 +1,35 @@
+state = {
+	id = 843
+	name = "STATE_843"
+	manpower = 3858505
+	state_category = state_05
+
+	history = {
+		owner = ELS
+		victory_points = { 12823 5 } #San Salvador
+
+		buildings = {
+			infrastructure = 1
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+			air_base = 1
+			12823 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ELS
+		set_variable = { geothermal_energy_production_var = 0.095 }
+		add_dynamic_modifier = { modifier = geothermal_infrastructure_in_state }
+		set_variable = { productivity_state_var = 828 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_san_salvador }
+			province = { id = 12823 }
+		}
+	}
+
+	provinces = {
+		12823
+	}
+}

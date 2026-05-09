@@ -1,0 +1,24 @@
+state = {
+	id = 341
+	name = "STATE_341"
+
+	history = {
+		owner = TOG
+		add_core_of = TOG
+		victory_points = {
+			12843 2
+		}
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		set_variable = { productivity_state_var = 871 }
+	}
+
+	provinces = {
+		12843 9704
+	}
+	manpower = 1838952
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}
