@@ -1,0 +1,29 @@
+l_english:
+ # Building tooltip overrides — adds money cost info to building descriptions
+ # These appear when player hovers over a building in construction menu
+
+ industrial_complex_desc: "§YIncreases construction speed in this state, doubles infrastructure repair speed.§!\n\n§G[Realistic Cost System]§!\nMonthly drain while constructing: §Y135 IC × $0.20M × your cost factor§!\nFull cost (33,150 IC): §Y$2.0–10.0B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$5.4B§!\n• §RPolska§! (factor 0.36): ~§Y$2.4B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$2.1B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ arms_factory_desc: "§YIncreases military equipment production capacity.§!\n\n§G[Realistic Cost System]§!\nFull cost (42,000 IC): §Y$2.6–13.0B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$6.8B§!\n• §RPolska§! (factor 0.36): ~§Y$3.0B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$2.6B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ dockyard_desc: "§YBuilds naval ships. Located in coastal states.§!\n\n§G[Realistic Cost System]§!\nFull cost (45,000 IC): §Y$2.8–13.5B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$7.3B§!\n• §RPolska§! (factor 0.36): ~§Y$3.2B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$2.8B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ offices_desc: "§YBoosts service economy and tax revenue.§!\n\n§G[Realistic Cost System]§!\nFull cost (40,000 IC): §Y$2.5–12.0B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$6.5B§!\n• §RPolska§! (factor 0.36): ~§Y$2.9B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$2.5B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ agriculture_district_desc: "§YProduces food and agricultural goods. Increases supplies and fuel.§!\n\n§G[Realistic Cost System]§!\nFull cost (15,000 IC): §Y$0.9–4.5B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$2.4B§!\n• §RPolska§! (factor 0.36): ~§Y$1.1B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$0.9B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ nuclear_reactor_desc: "§YProduces nuclear energy and contributes to nuclear weapons program.§!\n\n§G[Realistic Cost System]§!\nFull cost (50,000 IC): §Y$3.1–15.0B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$8.1B§!\n• §RPolska§! (factor 0.36): ~§Y$3.6B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$3.1B§!\nReal 2000 nuclear plant cost: §Y$6-10B§! per reactor.\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ fossil_powerplant_desc: "§YProduces electrical energy from fossil fuels.§!\n\n§G[Realistic Cost System]§!\nFull cost (~35,000 IC): §Y$2.1–10.5B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$5.7B§!\n• §RPolska§! (factor 0.36): ~§Y$2.5B§!\n• §RChiny/Indie§! (factor 0.31): ~§Y$2.2B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ renewable_energy_infra_desc: "§YProduces clean electrical energy from renewable sources.§!\n\n§G[Realistic Cost System]§!\nFull cost (~30,000 IC): §Y$1.9–9.0B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$4.9B§!\n• §RPolska§! (factor 0.36): ~§Y$2.2B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ microchip_plant_desc: "§YProduces high-tech microchips for advanced equipment.§!\n\n§G[Realistic Cost System]§!\nFull cost (~50,000 IC): §Y$3.1–15.0B§! (depending on country wealth)\n• §RUSA§! (factor 0.81): ~§Y$8.1B§!\n• §RPolska§! (factor 0.36): ~§Y$3.6B§!\nReal 2000 fab cost: §Y$3-5B§! (TSMC, Intel).\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ infrastructure_desc: "§YIncreases supply throughput and movement speed.§!\n\n§G[Realistic Cost System]§!\nFull cost (10,000 IC): §Y$0.6–3.0B§! per level\n• §RUSA§! (factor 0.81): ~§Y$1.6B§!\n• §RPolska§! (factor 0.36): ~§Y$0.7B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ internet_station_desc: "§YBoosts cyber capabilities and information warfare.§!\n\n§G[Realistic Cost System]§!\nFull cost (~10,000 IC): §Y$0.6–3.0B§! per level\n• §RUSA§! (factor 0.81): ~§Y$1.6B§!\n• §RPolska§! (factor 0.36): ~§Y$0.7B§!\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ air_base_desc: "§YIncreases aircraft capacity in this state.§!\n\n§G[Realistic Cost System]§!\nFull cost (10,000 IC): §Y$0.6–3.0B§! per level\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"
+
+ naval_base_desc: "§YProvides docking for naval fleet, supports naval operations.§!\n\n§G[Realistic Cost System]§!\nFull cost (15,000 IC): §Y$0.9–4.5B§! per level\nDrain visible in §YBudget panel (F2) → 'Other Expenses'§!"

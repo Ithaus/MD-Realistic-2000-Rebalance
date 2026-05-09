@@ -4,11 +4,203 @@ All changes from vanilla Millennium Dawn to MD-Realistic-2000-Rebalance.
 
 ---
 
-## Version 1.1.0 — Money Cost System
+## Version 1.1.3 — Logic fixes + visible info idea
 
-Adds **construction & production money costs** to MD's economy. Building factories
-and producing equipment now drains the national treasury proportionally to country's
-GDP per capita.
+### Bug fixes from v1.1.2
+
+1. **Hook moved from on_weekly to on_monthly.** MD's tax engine resets
+   `additional_expenses_rate` every month — weekly additions were being lost.
+   Now we add the full monthly drain in one go, perfectly aligned with MD's
+   budget recalculation.
+
+2. **Removed direct `treasury -= cost`** — was double-charging when MD's
+   monthly system also deducted via `additional_expenses_rate`.
+
+3. **Utilization changed from 0.5 → 1.0** (full active civs). Player typically
+   dedicates all civilian factories to queue when building, so 100% utilization
+   is more realistic.
+
+### New: building tooltip overrides
+
+Instead of a separate informational idea, cost info now appears **directly in
+each building's tooltip** when player hovers over it in the construction menu.
+
+For each major building type (industrial_complex, arms_factory, dockyard,
+offices, agriculture_district, nuclear_reactor, fossil_powerplant,
+microchip_plant, infrastructure, internet_station, air_base, naval_base),
+the description now includes:
+
+```
+[Original MD description]
+
+[Realistic Cost System]
+Monthly drain while constructing: 135 IC × $0.20M × your cost factor
+Full cost (XX,XXX IC): $X.XB – $Y.YB (depending on country wealth)
+• USA (factor 0.81): ~$Z.ZB
+• Polska (factor 0.36): ~$A.AB
+• Chiny/Indie (factor 0.31): ~$B.BB
+Drain visible in Budget panel (F2) → 'Other Expenses'
+```
+
+### Files in v1.1.3
+
+- `common/scripted_effects/01_construction_money_cost.txt` — fixed logic
+- `common/on_actions/01_money_cost_hooks.txt` — monthly hook only
+- `common/ideas/01_economic_pressure.txt` — empty (deprecated)
+- `localisation/english/md_realistic_building_tooltips_l_english.yml` — building descriptions
+
+### Updated examples
+
+**Polish (factor 0.36):**
+- Build 1 industrial_complex (alone, 1 active state):
+  - 6 active civs × 135 IC × $0.0002B × 0.36 = **$0.058B/month** = $58M/month
+  - Total cost over ~50 months: $2.9B (matches our design table ✓)
+  - Visible in Budget panel → "Other Expenses": +$58M
+
+**USA (factor 0.81):**
+- Build 1 industrial_complex (alone, 1 active state):
+  - 60 active civs × 135 IC × $0.0002B × 0.81 = **$1.31B/month**
+  - Total over construction (~5 months at 60 civs): $6.5B (matches table ✓)
+  - Budget panel: +$1.31B "Other Expenses"
+
+---
+
+## Version 1.1.2 — IC-proportional construction cost (REPLACED by 1.1.3)
+
+**Improved over v1.1.1**: cost now scales with **IC (Industrial Capacity)** of the
+specific building being constructed, instead of flat per-state. Different building
+types now cost different amounts proportional to their `base_cost_ic`.
+
+### How it works
+
+```
+total_cost = base_cost_ic × $0.20M × cost_factor
+weekly_drain = active_civs × 31.5 IC × $0.20M × cost_factor
+```
+
+`active_civs` = `industrial_complex_total × manpower_fulfillment × 0.5` (50% utilization)
+
+### Per-building total cost (USA cost level, factor 0.81)
+
+| Building | base_cost_ic | Total $ |
+|---|---|---|
+| infrastructure | 10 000 | $1.62B |
+| agriculture_district | 15 000 | $2.43B |
+| industrial_complex | 33 150 | **$5.37B** |
+| offices | 40 000 | **$6.48B** |
+| arms_factory | 42 000 | **$6.80B** |
+| dockyard | 45 000 | **$7.29B** |
+| nuclear_reactor | 50 000 | **$8.10B** |
+
+### Per-country weekly drain (with 5 civ factories actively building)
+
+| Country | Cost factor | Weekly drain |
+|---|---|---|
+| USA | 0.81× | $25.5M/week |
+| Niemcy | 0.63× | $20.0M/week |
+| Polska | 0.36× | $11.3M/week |
+| Rosja | 0.32× | $10.1M/week |
+| Indie | 0.31× | $9.8M/week |
+
+### Tuning constants
+
+In `01_construction_money_cost.txt`:
+- `md_dollars_per_ic = 0.0002` (= $200k per IC, default)
+- `md_active_civs × 0.5` (= 50% of civs assumed in construction queue)
+- `md_cost_factor = 0.30 + 0.014 × gdp_per_capita` (country wealth scaling)
+
+To make costs **less punishing**: lower `md_dollars_per_ic` to `0.0001` (50% cheaper)
+To make costs **more punishing**: raise to `0.0004` (200% more)
+
+---
+
+## Version 1.1.1 — Construction Cost ONLY (REPLACED by 1.1.2)
+
+**Simplified from v1.1.0** — removed production cost and bankruptcy decay (MD already
+has its own treasury/bankruptcy system). Now only **construction money cost** while
+buildings are being built.
+
+### How it works
+
+**Per WEEK** for each country:
+1. Count states currently constructing buildings (`is_building_constructing = yes`)
+2. Compute weekly drain per active construction = `$0.10B × cost_factor`
+3. Total drain = active_constructions × per-construction cost
+4. Drain treasury directly + add to `additional_expenses_rate` (visible in budget panel)
+
+**Cost factor formula:**
+```
+cost_factor = 0.30 + 0.014 × gdp_per_capita
+```
+
+| Country | gdp/c | Cost factor | Per-construction weekly cost |
+|---|---|---|---|
+| USA | $36.3k | 0.81× | $81M/week per active site |
+| Niemcy | $23.9k | 0.63× | $63M/week |
+| Japonia | $39.2k | 0.85× | $85M/week |
+| Polska | $4.5k | 0.36× | $36M/week |
+| Rosja | $1.8k | 0.32× | $32M/week |
+| Chiny | $1.0k | 0.31× | $31M/week |
+| Indie | $0.4k | 0.31× | $31M/week (floor) |
+
+### Example: Polska buduje 3 fabryki w 3 różnych stanach
+
+```
+Poland gdp/c = $4.5k → cost_factor = 0.36
+Per-state weekly drain = $0.10B × 0.36 = $36M/week
+3 active states × $36M = $108M/week from treasury
+~ $470M/month total
+
+Construction takes ~13 months for industrial_complex.
+Total drain over 13 months: ~$6B for 3 buildings
+```
+
+### Example: USA buduje 10 fabryk w 10 stanach
+
+```
+USA gdp/c = $36.3k → cost_factor = 0.81
+Per-state weekly drain = $81M/week
+10 active states × $81M = $810M/week
+~ $3.5B/month
+
+Drogie ale ekonomicznie sensowne dla mocarstwa z $200B treasury.
+```
+
+### What was REMOVED from v1.1.0
+- ~~`calculate_production_money_cost`~~ (operating cost not wanted)
+- ~~`check_bankruptcy_status`~~ (MD already has bankruptcy system)
+- ~~5 economic_pressure ideas~~ (deprecated, file kept empty for compatibility)
+- ~~Localisation file~~
+
+### Files changed in v1.1.1
+- `common/scripted_effects/01_construction_money_cost.txt` — simplified
+- `common/on_actions/01_money_cost_hooks.txt` — changed monthly → weekly
+- `common/ideas/01_economic_pressure.txt` — deprecated (empty)
+
+### Tuning
+
+If construction cost is too punishing, edit `01_construction_money_cost.txt`:
+```
+set_temp_variable = { md_base_weekly_drain = 0.10 }   # Default $100M/week base
+```
+Lower to `0.05` (50% cheaper) or `0.15` (50% more expensive).
+
+If you want different scaling per country wealth, edit:
+```
+multiply_temp_variable = { md_construction_cost_factor = 0.014 }
+```
+Lower (e.g. 0.010) = less variance between rich/poor countries.
+
+---
+
+## Version 1.1.0 — Money Cost System (REPLACED by 1.1.1)
+
+Initial implementation of money cost system. Included production cost (operating)
+and 5-tier bankruptcy decay. **Removed in v1.1.1** because:
+- Operating cost was not desired (only construction matters)
+- Bankruptcy system was duplicating existing MD functionality
+
+See v1.1.1 entry above for current implementation.
 
 ### New mechanics
 
