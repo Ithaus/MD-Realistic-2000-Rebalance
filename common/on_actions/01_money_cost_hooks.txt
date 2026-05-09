@@ -1,8 +1,9 @@
 # =============================================================================
-# MD-Realistic-2000-Rebalance — on_actions hooks
+# MD-Realistic-2000-Rebalance — on_actions hooks (v1.1.4)
 # =============================================================================
-# - on_startup: initialize tracking variables, add informational idea
-# - on_monthly: compute construction money cost (feeds into budget panel)
+# Hook is on_WEEKLY (changed from on_monthly in v1.1.4) for:
+# - Granular treasury drain (player sees treasury decrease each week)
+# - More responsive feedback when starting/finishing construction
 # =============================================================================
 
 on_actions = {
@@ -16,7 +17,7 @@ on_actions = {
 		}
 	}
 
-	on_monthly = {
+	on_weekly = {
 		effect = {
 			every_country = {
 				limit = { exists = yes }

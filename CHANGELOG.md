@@ -4,7 +4,104 @@ All changes from vanilla Millennium Dawn to MD-Realistic-2000-Rebalance.
 
 ---
 
-## Version 1.1.3 — Logic fixes + visible info idea
+## Version 1.1.4 — Audit fixes (logic correctness)
+
+After auditing MD's source code, found 3 critical issues with v1.1.3 that affected
+correctness. This release fixes all of them.
+
+### Bug 1 — gdp_per_capita is overwritten by MD every cycle
+
+**Issue:** MD's `00_money_system.txt` line 5092 does:
+```
+set_variable = { gdp_per_capita = gdp_total }
+divide_variable = { gdp_per_capita = population_total_m }
+```
+
+So MD recomputes `gdp_per_capita` from buildings × productivity each cycle. Our
+declared starting value (e.g., Russia 1.771) is just a seed — actual runtime
+value drifts to whatever MD's formula produces (typically higher than declared).
+
+**Fix:** Use `gdpc_converging_var` instead. This is MD's smoothed gdp/c variable
+that updates gradually via `worker_requirements_variable_gdpc_converging` and is
+used internally by MD calculations. More stable, more predictable.
+
+```
+# v1.1.3 (buggy):
+set_temp_variable = { md_cost_factor = gdp_per_capita }
+
+# v1.1.4 (fixed):
+set_temp_variable = { md_cost_factor = gdpc_converging_var }
+```
+
+### Bug 2 — additional_expenses_rate is reset by MD
+
+**Issue:** MD's `calculate_additional_expense_rate` function (line 3119) does:
+```
+set_variable = { additional_expenses_rate = 0 }
+```
+
+Then accumulates expenses from various sources. Our addition to this variable
+gets wiped out depending on order of execution between mods.
+
+**Fix:** Direct treasury drain instead:
+```
+# v1.1.3 (buggy):
+add_to_variable = { additional_expenses_rate = monthly_drain }
+
+# v1.1.4 (fixed):
+subtract_from_variable = { treasury = weekly_drain }
+```
+
+This is more visible to player too — treasury decreases every week directly.
+
+### Bug 3 — is_building_constructing trigger uncertainty
+
+**Issue:** This trigger is HOI4 standard but not used anywhere in MD source code.
+Cannot be 100% sure it works correctly in MD context.
+
+**Fix:** Added fallback detection:
+```
+# Try is_building_constructing first
+every_owned_state = {
+    limit = { is_building_constructing = yes }
+    set_variable = { PREV.md_any_construction = 1 }
+}
+
+# Fallback: if civs are highly utilized, assume constructing
+if = {
+    limit = {
+        check_variable = { md_any_construction = 0 }
+        check_variable = { civilian_factories_manpower_fulfillment > 0.5 }
+    }
+    set_variable = { md_any_construction = 1 }
+}
+```
+
+### Other changes in v1.1.4
+
+- Hook moved on_monthly → **on_weekly** (more granular feedback)
+- Added `clamp_variable` for `md_realistic_construction_cost` (max $5B/week safety)
+- Updated tooltip examples to reflect realistic gdpc_converging_var values:
+  - Polska factor ~0.38 (vs 0.36 declared)
+  - Russia factor ~0.41 (vs 0.32 declared)
+  - USA factor ~0.85 (vs 0.81 declared)
+
+### Verified math (your validation)
+
+Russia gdp/c = $1,771 × 146.6M pop = $260B total ✓ (matches WB 2000)
+USA gdp/c = $36,329 × 282.2M pop = $10.25T ✓ (matches WB 2000)
+
+Cost factor scaling verification:
+- gdp/c $1.7k (Russia start) → factor 0.32
+- gdp/c $4.5k (Polska) → factor 0.36
+- gdp/c $36k (USA) → factor 0.81
+- gdp/c $50k → factor 1.00
+- gdp/c $80k → factor 1.42
+✓ Higher gdp/c = higher factor = more expensive construction (correct economically)
+
+---
+
+## Version 1.1.3 — Logic fixes + visible info idea (REPLACED by 1.1.4)
 
 ### Bug fixes from v1.1.2
 

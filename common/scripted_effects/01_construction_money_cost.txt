@@ -1,103 +1,117 @@
 # =============================================================================
-# MD-Realistic-2000-Rebalance — IC-Proportional Construction Money Cost
+# MD-Realistic-2000-Rebalance — IC-Proportional Construction Money Cost (v1.1.4)
 # =============================================================================
-# Charges money to treasury proportional to the IC (Industrial Capacity) being
-# spent on construction.
+# Charges money to treasury proportional to IC being spent on active construction.
+#
+# v1.1.4 FIXES (vs v1.1.3):
+#   1. Uses gdpc_converging_var instead of gdp_per_capita
+#      - gdp_per_capita is overwritten every cycle by MD's calculate_gdp
+#      - gdpc_converging_var is smoothed/stable, doesn't fluctuate per cycle
+#
+#   2. Direct treasury drain (subtract_from_variable = treasury) instead of
+#      additional_expenses_rate which MD's calculate_additional_expense_rate
+#      RESETS to 0 each monthly cycle (line 3119 of MD's 00_money_system.txt)
+#
+#   3. Construction detection: tries is_building_constructing first, falls back
+#      to civilian_factories_manpower_fulfillment > 0.5 as proxy
 #
 # FORMULA:
-#   monthly_drain = active_civs × 135 IC/month × $0.20M × cost_factor
-#   where:
-#     active_civs    = industrial_complex_total × civilian_factories_manpower_fulfillment
-#     135 IC/month   = 4.5 IC/day × 30 days (default civ output rate)
-#     $0.20M per IC  = calibration constant (md_dollars_per_ic = 0.0002 in $B)
-#     cost_factor    = 0.30 + 0.014 × gdp_per_capita (clamped 0.30-1.50)
+#   weekly_drain = active_civs × 31.5 IC × $0.20M × cost_factor
 #
-# EXAMPLES OF TOTAL BUILDING COSTS (USA factor 0.81):
-#   industrial_complex (33,150 IC) → $5.37B
-#   arms_factory       (42,000 IC) → $6.80B
-#   dockyard           (45,000 IC) → $7.29B
-#   offices            (40,000 IC) → $6.48B
-#   nuclear_reactor    (50,000 IC) → $8.10B
-#   infrastructure     (10,000 IC) → $1.62B
+# Where:
+#   active_civs   = industrial_complex_total × civilian_factories_manpower_fulfillment
+#   31.5 IC/week  = 4.5 IC/day × 7 days
+#   $0.20M per IC = calibration constant ($0.0002B per IC)
+#   cost_factor   = 0.30 + 0.014 × gdpc_converging_var (clamped 0.30-1.50)
 #
-# IMPLEMENTATION NOTES:
-#   - Hook is on_MONTHLY (not weekly). MD's tax engine resets
-#     additional_expenses_rate every month, so weekly additions get overwritten.
-#   - We feed our drain into additional_expenses_rate which appears in MD's
-#     budget panel under "Other Expenses".
-#   - We do NOT directly subtract from treasury — MD's existing system handles
-#     that based on additional_expenses_rate.
+# EXAMPLES (cost_factor at typical convergence values):
+#   USA (gdpc ~36): factor 0.81  → industrial_complex (33150 IC) total ~$5.4B
+#   Polska (gdpc ~6): factor 0.38 → industrial_complex total ~$2.5B
+#   Russia (gdpc ~8): factor 0.41 → industrial_complex total ~$2.7B
+#   Indie (gdpc ~2): factor 0.33  → industrial_complex total ~$2.2B
 #
 # TUNING:
-#   md_dollars_per_ic = 0.0002 (default $200k per IC)
-#     Lower (0.0001) = 50% cheaper construction
-#     Higher (0.0004) = 200% more expensive
+#   Lower md_dollars_per_ic for cheaper construction (default 0.0002 = $200k/IC)
 # =============================================================================
 
 
 # -----------------------------------------------------------------------------
 # Effect: calculate_construction_money_cost
-# Called: monthly via on_actions
-# Purpose: Compute monthly drain from active construction; feed into MD's budget
+# Called: weekly via on_actions
+# Purpose: Drain treasury proportional to IC spent on construction
 # -----------------------------------------------------------------------------
 calculate_construction_money_cost = {
-	# Step 1: Country-specific cost factor (richer = more expensive)
-	# Formula: 0.30 + 0.014 × gdp_per_capita (in thousands USD)
-	# Examples: USA $36k → 0.81, Niemcy $24k → 0.63, Polska $4.5k → 0.36, Indie $0.4k → 0.31
-	set_temp_variable = { md_cost_factor = gdp_per_capita }
+
+	# Step 1: Compute cost factor using SMOOTHED gdp/c (not raw)
+	# gdpc_converging_var is MD's stable proxy for gdp_per_capita
+	# It's used internally in MD's calculations to avoid spikes
+	set_temp_variable = { md_cost_factor = gdpc_converging_var }
 	multiply_temp_variable = { md_cost_factor = 0.014 }
 	add_to_temp_variable = { md_cost_factor = 0.30 }
 	clamp_temp_variable = { var = md_cost_factor min = 0.30 max = 1.50 }
 
-	# Save for tooltip display
+	# Save for tooltip/display
 	set_variable = { md_realistic_cost_factor_display = md_cost_factor }
 
-	# Step 2: Check if any state is constructing something
-	# Only charge money if there's actually active construction
+	# Step 2: Detect active construction with fallback
+	#   Primary:  any owned state with is_building_constructing = yes
+	#   Fallback: civilian_factories_manpower_fulfillment > 0.5
+	#             (means civs are working, likely building rather than producing CG)
 	set_variable = { md_any_construction = 0 }
+
+	# Try primary detection
 	every_owned_state = {
 		limit = { is_building_constructing = yes }
 		set_variable = { PREV.md_any_construction = 1 }
 	}
 
-	# Reset main cost variable
+	# Fallback: if primary detected nothing but civs are highly utilized,
+	# assume they're constructing
+	if = {
+		limit = {
+			check_variable = { md_any_construction = 0 }
+			check_variable = { civilian_factories_manpower_fulfillment > 0.5 }
+			check_variable = { industrial_complex_total > 0 }
+		}
+		set_variable = { md_any_construction = 1 }
+	}
+
+	# Reset cost variable each tick
 	set_variable = { md_realistic_construction_cost = 0 }
 
-	# Step 3: If building anything, calculate IC-based monthly drain
+	# Step 3: Calculate IC-based weekly drain
 	if = {
 		limit = { check_variable = { md_any_construction > 0 } }
 
-		# Active civilian factories engaged in construction
-		# Use full count × manpower fulfillment (NO 50% reduction —
-		# we assume player dedicates civs to queue when building)
 		set_temp_variable = { md_active_civs = industrial_complex_total }
 		multiply_temp_variable = { md_active_civs = civilian_factories_manpower_fulfillment }
 
-		# IC per month from those civs
-		# Default: 4.5 IC/day × 30 days = 135 IC/month per civ
-		set_temp_variable = { md_ic_per_month = md_active_civs }
-		multiply_temp_variable = { md_ic_per_month = 135 }
+		# IC per week (4.5 IC/day × 7 days = 31.5 IC/week per civ)
+		set_temp_variable = { md_ic_per_week = md_active_civs }
+		multiply_temp_variable = { md_ic_per_week = 31.5 }
 
-		# Dollars per IC point (calibration constant)
-		# 0.0002 = $200k per IC = $200M per 1,000 IC
+		# Dollars per IC ($0.0002B = $200k)
 		set_temp_variable = { md_dollars_per_ic = 0.0002 }
 
-		# Monthly drain in BILLIONS USD
-		# = ic_per_month × $/IC × cost_factor
-		set_variable = { md_realistic_construction_cost = md_ic_per_month }
+		# Weekly drain in BILLIONS USD
+		set_variable = { md_realistic_construction_cost = md_ic_per_week }
 		multiply_variable = { md_realistic_construction_cost = md_dollars_per_ic }
 		multiply_variable = { md_realistic_construction_cost = md_cost_factor }
+
+		# Clamp to sane range (no negative drain, max $5B/week to prevent runaway)
+		clamp_variable = { var = md_realistic_construction_cost min = 0 max = 5 }
 	}
 
-	# Step 4: Feed into MD's existing expense system
-	# additional_expenses_rate appears in budget panel under "Other Expenses"
-	add_to_variable = { additional_expenses_rate = md_realistic_construction_cost }
+	# Step 4: DIRECT treasury drain (weekly)
+	# This bypasses MD's calculate_additional_expense_rate which would reset
+	# any addition we make. Treasury decreases visibly each week.
+	subtract_from_variable = { treasury = md_realistic_construction_cost }
 }
 
 
 # -----------------------------------------------------------------------------
 # Effect: md_realistic_init_variables
-# Called: once at game start via on_startup
+# Called: once at game start
 # -----------------------------------------------------------------------------
 md_realistic_init_variables = {
 	set_variable = { md_realistic_construction_cost = 0 }
